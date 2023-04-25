@@ -8,13 +8,47 @@
 import SwiftUI
 
 struct AddPlayerView: View {
+   
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var managedObjContext
+    
+    
+    @ObservedObject var viewModel: AddPlayerViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            Spacer()
+            HStack{
+                Text("Name: ")
+                TextField("Name", text: $viewModel.name)
+            }
+            HStack{
+                Text("Position: ")
+                Picker("Select a position", selection: $viewModel.selection){
+                    ForEach(viewModel.positions, id: \.self){
+                        Text($0)
+                    }
+                    .pickerStyle(.wheel)
+                    
+                }
+            }
+            Spacer()
+            Button("Add Player") {
+                DataController().addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
+                dismiss()
+            }
+            
+           
+        }
+      
     }
 }
 
+
 struct AddPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AddPlayerView()
+        let viewModel = AddPlayerViewModel()
+        AddPlayerView(viewModel: viewModel)
     }
 }

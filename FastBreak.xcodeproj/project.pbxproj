@@ -18,6 +18,8 @@
 		34D5A87F29F06E1D00FFEF75 /* StartGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87E29F06E1D00FFEF75 /* StartGameView.swift */; };
 		34D5A88129F06E2C00FFEF75 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88029F06E2C00FFEF75 /* AddPlayerView.swift */; };
 		34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88229F06E3300FFEF75 /* StatsView.swift */; };
+		34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085229F6DE4000CC24DB /* GameViewModel.swift */; };
+		34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		34D5A87E29F06E1D00FFEF75 /* StartGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameView.swift; sourceTree = "<group>"; };
 		34D5A88029F06E2C00FFEF75 /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
 		34D5A88229F06E3300FFEF75 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		34E7085229F6DE4000CC24DB /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */,
-				34D5A87429F065CF00FFEF75 /* DataController.swift */,
 				34D5A87829F0686E00FFEF75 /* Team.swift */,
 				34D5A87A29F0699900FFEF75 /* Game.swift */,
 			);
@@ -97,6 +100,9 @@
 		34D5A87C29F06D9F00FFEF75 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				34E7085229F6DE4000CC24DB /* GameViewModel.swift */,
+				34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */,
+				34D5A87429F065CF00FFEF75 /* DataController.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 				34D5A87929F0686E00FFEF75 /* Team.swift in Sources */,
 				34D5A86029F0647A00FFEF75 /* FastBreakApp.swift in Sources */,
 				34D5A88129F06E2C00FFEF75 /* AddPlayerView.swift in Sources */,
+				34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */,
+				34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */,
 				34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

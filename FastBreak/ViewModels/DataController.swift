@@ -10,6 +10,7 @@ import CoreData
 
 class DataController: ObservableObject{
     let container = NSPersistentContainer(name: "PlayerModel")
+    @Published var savedEntities: [Player] = []
     
     init(){
         container.loadPersistentStores{ desc, error in
@@ -17,6 +18,17 @@ class DataController: ObservableObject{
                 print("Failed to load the data \(error.localizedDescription)")
             }
             
+        }
+        fetchPlayers()
+    }
+    
+    func fetchPlayers() {
+        let request = NSFetchRequest<Player>(entityName: "Player")
+        
+        do{
+            savedEntities = try container.viewContext.fetch(request)
+        } catch let error{
+            print("Error fetching \(error)")
         }
     }
     

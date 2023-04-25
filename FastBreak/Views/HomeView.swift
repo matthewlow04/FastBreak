@@ -35,9 +35,10 @@ var playButton: some View {
         }
     }
 }
-
+let addPlayer = AddPlayerViewModel()
 var addButton: some View{
-    NavigationLink(destination: AddPlayerView()){
+   
+    NavigationLink(destination: AddPlayerView(viewModel: addPlayer)){
         HStack{
             Text("ADD PLAYERS")
             Image(systemName: "play")
