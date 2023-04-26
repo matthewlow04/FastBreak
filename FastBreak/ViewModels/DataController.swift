@@ -58,10 +58,6 @@ class DataController: ObservableObject{
         
     }
     
-    func deletePlayer(indexSet: IndexSet, context: NSManagedObjectContext){
-        indexSet.map {savedPlayers[$0]}.forEach(context.delete)
-        save(context: context)
-        
-    }
+    
     
 }

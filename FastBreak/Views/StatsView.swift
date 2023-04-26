@@ -27,9 +27,16 @@ struct StatsView: View {
                     }
                 }
             }
-            .onDelete(perform: vm.deletePlayer(indexSet: IndexSet(vm.savedPlayers), context: managedObjContext))
-        }
+            .onDelete(perform: deletePlayer)
+        }.navigationTitle(Text("Player Stats"))
         
+        
+        
+    }
+    
+    private func deletePlayer(offsets: IndexSet){
+        offsets.map {vm.savedPlayers[$0]}.forEach(managedObjContext.delete)
+        vm.save(context: managedObjContext)
     }
     
    
