@@ -6,16 +6,13 @@
 //
 
 import Foundation
-import SwiftUI
 
 
 
 class AddPlayerViewModel: ObservableObject{
     
-    @Environment(\.managedObjectContext) var managedObjContext
     @Published var selection = "Point Guard"
     @Published var name = ""
     let positions = ["Point Guard", "Shooting Guard", "Small Forward", "Power Forward", "Center"]
-    
     
 }

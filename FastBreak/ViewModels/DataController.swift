@@ -10,7 +10,7 @@ import CoreData
 
 class DataController: ObservableObject{
     let container = NSPersistentContainer(name: "PlayerModel")
-    @Published var savedEntities: [Player] = []
+    @Published var savedPlayers: [Player] = []
     
     init(){
         container.loadPersistentStores{ desc, error in
@@ -26,7 +26,7 @@ class DataController: ObservableObject{
         let request = NSFetchRequest<Player>(entityName: "Player")
         
         do{
-            savedEntities = try container.viewContext.fetch(request)
+            savedPlayers = try container.viewContext.fetch(request)
         } catch let error{
             print("Error fetching \(error)")
         }
@@ -54,6 +54,12 @@ class DataController: ObservableObject{
     func editPlayer(player: Player, position:String, name: String, context: NSManagedObjectContext){
         player.name = name
         player.position = position
+        save(context: context)
+        
+    }
+    
+    func deletePlayer(indexSet: IndexSet, context: NSManagedObjectContext){
+        indexSet.map {savedPlayers[$0]}.forEach(context.delete)
         save(context: context)
         
     }

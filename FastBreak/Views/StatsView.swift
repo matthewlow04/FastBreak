@@ -8,10 +8,34 @@
 import SwiftUI
 
 struct StatsView: View {
+    @Environment(\.managedObjectContext) var managedObjContext
+    
+    @StateObject var vm = DataController()
+   
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            ForEach(vm.savedPlayers){ player in
+                NavigationLink(destination: Text("Edit Player View")){
+                    HStack{
+                        VStack(alignment: .leading, spacing: 6){
+                            Text(player.name!)
+                                .bold()
+                            Text(player.position!)
+                        }
+                       
+                    }
+                }
+            }
+            .onDelete(perform: vm.deletePlayer(indexSet: IndexSet(vm.savedPlayers), context: managedObjContext))
+        }
+        
     }
+    
+   
+   
 }
+
 
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {
