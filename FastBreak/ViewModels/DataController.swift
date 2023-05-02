@@ -10,7 +10,6 @@ import CoreData
 
 class DataController: ObservableObject{
     let container = NSPersistentContainer(name: "PlayerModel")
-    @Published var savedPlayers: [Player] = []
     
     init(){
         container.loadPersistentStores{ desc, error in
@@ -18,17 +17,6 @@ class DataController: ObservableObject{
                 print("Failed to load the data \(error.localizedDescription)")
             }
             
-        }
-        fetchPlayers()
-    }
-    
-    func fetchPlayers() {
-        let request = NSFetchRequest<Player>(entityName: "Player")
-        
-        do{
-            savedPlayers = try container.viewContext.fetch(request)
-        } catch let error{
-            print("Error fetching \(error)")
         }
     }
     
@@ -46,18 +34,14 @@ class DataController: ObservableObject{
         let player = Player(context: context)
         player.name = name
         player.position = position
-        player.id = UUID()
+        player.id = UUID() //new food so new id
         save(context: context)
     }
     
-    //change player name or position
-    func editPlayer(player: Player, position:String, name: String, context: NSManagedObjectContext){
+    func editPlayer(player: Player, name: String, context: NSManagedObjectContext){
         player.name = name
-        player.position = position
         save(context: context)
         
     }
-    
-    
     
 }

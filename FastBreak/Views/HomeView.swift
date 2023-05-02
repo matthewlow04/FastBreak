@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-
 struct HomeView: View {
+    
     
     var body: some View {
         NavigationView{
@@ -28,6 +28,7 @@ struct HomeView: View {
     }
 }
 var playButton: some View {
+    
     NavigationLink(destination: StartGameView()) {
         HStack{
             Text("PLAY")

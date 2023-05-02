@@ -16,32 +16,33 @@ struct AddPlayerView: View {
     @ObservedObject var viewModel: AddPlayerViewModel
     
     var body: some View {
-        
-        VStack{
-            Spacer()
-            HStack{
-                Text("Name: ")
-                TextField("Name", text: $viewModel.name)
-            }
-            HStack{
-                Text("Position: ")
-                Picker("Select a position", selection: $viewModel.selection){
-                    ForEach(viewModel.positions, id: \.self){
-                        Text($0)
+        NavigationView{
+            Form{
+                Section{
+                    HStack{
+                        Text("Name: ")
+                        TextField("Name", text: $viewModel.name)
                     }
-                    .pickerStyle(.wheel)
-                    
+                }
+                Section{
+                    Picker("Select a position", selection: $viewModel.selection){
+                        ForEach(viewModel.positions, id: \.self){
+                            Text($0)
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                }header: {
+                    Text("Position")
+                }
+                Section{
+                    Button("Add Player") {
+                        DataController().addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
+                        dismiss()
+                    }
                 }
             }
-            Spacer()
-            Button("Add Player") {
-                DataController().addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
-                dismiss()
-            }
-            
-           
+            .navigationTitle("Add Player")
         }
-      
     }
 }
 

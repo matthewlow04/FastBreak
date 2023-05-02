@@ -9,13 +9,15 @@ import SwiftUI
 
 struct StatsView: View {
     @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: []) var playerStats: FetchedResults<Player>
     
     @StateObject var vm = DataController()
-   
+    
     
     var body: some View {
+
         List{
-            ForEach(vm.savedPlayers){ player in
+            ForEach(playerStats){ player in
                 NavigationLink(destination: Text("Edit Player View")){
                     HStack{
                         VStack(alignment: .leading, spacing: 6){
@@ -35,7 +37,7 @@ struct StatsView: View {
     }
     
     private func deletePlayer(offsets: IndexSet){
-        offsets.map {vm.savedPlayers[$0]}.forEach(managedObjContext.delete)
+        offsets.map {playerStats[$0]}.forEach(managedObjContext.delete)
         vm.save(context: managedObjContext)
     }
     

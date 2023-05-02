@@ -16,7 +16,7 @@ enum GameAction{
 }
 
 struct Game{
-    var targetScore: Int
+    var targetScore = 11
     var homeTeam: Team
     var awayTeam: Team
     
