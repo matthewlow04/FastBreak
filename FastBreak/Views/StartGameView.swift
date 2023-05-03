@@ -64,8 +64,6 @@ struct StartGameView: View {
                 }
             }
             
-            
-            ready
             playGameButton
                 .disabled(game.okToContinue == false)
             
@@ -74,7 +72,7 @@ struct StartGameView: View {
       
     }
     var playGameButton: some View{
-        NavigationLink(destination: Text("works")){
+        NavigationLink(destination: ScoreboardView()){
             HStack{
                 Text("LETS PLAY")
                 Image(systemName: "play")

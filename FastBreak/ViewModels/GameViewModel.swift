@@ -16,37 +16,31 @@ class GameViewModel: ObservableObject{
     @Published var playerOne: Player?{
         didSet{
             addPlayers()
-            print(okToContinue)
         }
     }
     @Published var playerTwo: Player?{
         didSet{
             addPlayers()
-            print(okToContinue)
         }
     }
     @Published var playerThree: Player?{
         didSet{
             addPlayers()
-            print(okToContinue)
         }
     }
     @Published var playerFour: Player?{
         didSet{
             addPlayers()
-            print(okToContinue)
         }
     }
     @Published var playerFive: Player?{
         didSet{
             addPlayers()
-            print(okToContinue)
         }
     }
     @Published var playerSix: Player?{
         didSet{
             addPlayers()
-            print(okToContinue)
         }
     }
     @Published var playersInGame = [Player]()
