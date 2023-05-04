@@ -26,6 +26,13 @@ struct Game{
         self.targetScore = targetScore
     }
     
+    func checkGame(){
+        if(homeTeam.teamPoints >= targetScore || awayTeam.teamPoints >= targetScore){
+            
+        }
+    }
+    
 }
+
 
 

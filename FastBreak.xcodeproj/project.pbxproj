@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1A2A0301E90019A842 /* ScoreboardView.swift */; };
 		34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1C2A0302230019A842 /* PlayerLabelView.swift */; };
-		34D06F1F2A03049F0019A842 /* ScoreboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1E2A03049F0019A842 /* ScoreboardViewModel.swift */; };
 		34D06F212A0308B40019A842 /* GameScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F202A0308B40019A842 /* GameScoreView.swift */; };
+		34D06F242A038A680019A842 /* PlayerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F222A038A680019A842 /* PlayerModel.xcdatamodeld */; };
 		34D5A86029F0647A00FFEF75 /* FastBreakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A85F29F0647A00FFEF75 /* FastBreakApp.swift */; };
 		34D5A86229F0647A00FFEF75 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A86129F0647A00FFEF75 /* HomeView.swift */; };
 		34D5A86429F0648000FFEF75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A86329F0648000FFEF75 /* Assets.xcassets */; };
 		34D5A86729F0648000FFEF75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A86629F0648000FFEF75 /* Preview Assets.xcassets */; };
-		34D5A87329F0651D00FFEF75 /* PlayerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */; };
 		34D5A87529F065CF00FFEF75 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87429F065CF00FFEF75 /* DataController.swift */; };
 		34D5A87929F0686E00FFEF75 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87829F0686E00FFEF75 /* Team.swift */; };
 		34D5A87B29F0699900FFEF75 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87A29F0699900FFEF75 /* Game.swift */; };
@@ -29,14 +28,13 @@
 /* Begin PBXFileReference section */
 		34D06F1A2A0301E90019A842 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		34D06F1C2A0302230019A842 /* PlayerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLabelView.swift; sourceTree = "<group>"; };
-		34D06F1E2A03049F0019A842 /* ScoreboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewModel.swift; sourceTree = "<group>"; };
 		34D06F202A0308B40019A842 /* GameScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreView.swift; sourceTree = "<group>"; };
+		34D06F232A038A680019A842 /* PlayerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerModel.xcdatamodel; sourceTree = "<group>"; };
 		34D5A85C29F0647A00FFEF75 /* FastBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D5A85F29F0647A00FFEF75 /* FastBreakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastBreakApp.swift; sourceTree = "<group>"; };
 		34D5A86129F0647A00FFEF75 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34D5A86329F0648000FFEF75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D5A86629F0648000FFEF75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		34D5A87229F0651D00FFEF75 /* PlayerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerModel.xcdatamodel; sourceTree = "<group>"; };
 		34D5A87429F065CF00FFEF75 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		34D5A87829F0686E00FFEF75 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		34D5A87A29F0699900FFEF75 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -98,9 +96,9 @@
 		34D5A87029F0650D00FFEF75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */,
 				34D5A87829F0686E00FFEF75 /* Team.swift */,
 				34D5A87A29F0699900FFEF75 /* Game.swift */,
+				34D06F222A038A680019A842 /* PlayerModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				34E7085229F6DE4000CC24DB /* GameViewModel.swift */,
-				34D06F1E2A03049F0019A842 /* ScoreboardViewModel.swift */,
 				34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */,
 				34D5A87429F065CF00FFEF75 /* DataController.swift */,
 			);
@@ -201,11 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D06F212A0308B40019A842 /* GameScoreView.swift in Sources */,
-				34D5A87329F0651D00FFEF75 /* PlayerModel.xcdatamodeld in Sources */,
 				34D5A87B29F0699900FFEF75 /* Game.swift in Sources */,
 				34D5A87529F065CF00FFEF75 /* DataController.swift in Sources */,
 				34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */,
-				34D06F1F2A03049F0019A842 /* ScoreboardViewModel.swift in Sources */,
+				34D06F242A038A680019A842 /* PlayerModel.xcdatamodeld in Sources */,
 				34D5A87F29F06E1D00FFEF75 /* StartGameView.swift in Sources */,
 				34D5A86229F0647A00FFEF75 /* HomeView.swift in Sources */,
 				34D5A87929F0686E00FFEF75 /* Team.swift in Sources */,
@@ -417,12 +413,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */ = {
+		34D06F222A038A680019A842 /* PlayerModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				34D5A87229F0651D00FFEF75 /* PlayerModel.xcdatamodel */,
+				34D06F232A038A680019A842 /* PlayerModel.xcdatamodel */,
 			);
-			currentVersion = 34D5A87229F0651D00FFEF75 /* PlayerModel.xcdatamodel */;
+			currentVersion = 34D06F232A038A680019A842 /* PlayerModel.xcdatamodel */;
 			path = PlayerModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -9,31 +9,53 @@ import SwiftUI
 
 struct PlayerLabelView: View {
     var player: Player
+    @StateObject var gvm: GameViewModel
     
     var body: some View {
         HStack{
             Text(player.name ?? "Unnamed player")
+                .lineLimit(2)
+                .frame(width: 100, height: 50, alignment: .center)
             VStack{
-                Text("Points")
-                Text("0")
+                
+                Text("Pts")
+                Text("\(player.points)")
+                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "point", player: player)})
             }
+            .frame(width: 50, height: 50)
             VStack{
-                Text("Rebounds")
-                Text("0")
+                Text("Rbd")
+                Text("\(player.assists)")
+                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "rebound", player: player)})
             }
+            .frame(width: 50, height: 50)
             VStack{
-                Text("Assists")
-                Text("0")
+                Text("Ast")
+                Text("\(player.rebounds)")
+                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "assist", player: player)})
             }
+            .frame(width: 50, height: 50)
             VStack{
-                Text("Steals")
-                Text("0")
+                Text("Stl")
+                Text("\(player.steals)")
+                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "steal", player: player)})
             }
+            .frame(width: 50, height: 50)
             VStack{
-                Text("Blocks")
-                Text("0")
+                Text("Blk")
+                Text("\(player.blocks)")
+                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "block", player: player)})
             }
+            .frame(width: 50, height: 50)
         }
+    }
+    
+    var add: some View{
+        Button(action: {
+            
+        }, label: {
+            Image(systemName: "plus.circle")
+        })
     }
 }
 

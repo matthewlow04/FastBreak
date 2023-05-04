@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct FastBreakApp: App {
+    
     @StateObject var dataController = DataController()
     var body: some Scene {
         WindowGroup {

@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct GameScoreView: View {
+    @StateObject var gvm: GameViewModel
     var body: some View {
         HStack{
             VStack{
                 Text("Home")
-                Text("0")
+                Text("\(gvm.homeTeam.teamPoints)")
             }
             Text("-")
             VStack{
                 Text("Away")
-                Text("0")
+                Text("\(gvm.awayTeam.teamPoints)")
             }
         }
         .font(.largeTitle)
     }
 }
 
-struct GameScoreView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameScoreView()
-    }
-}
+//struct GameScoreView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameScoreView()
+//    }
+//}

@@ -13,7 +13,7 @@ struct StartGameView: View {
     @FetchRequest(sortDescriptors: []) var playerStats: FetchedResults<Player>
     @Environment(\.managedObjectContext) var managedObjContext
     @StateObject var vm = DataController()
-    @ObservedObject var game = GameViewModel()
+    @ObservedObject var gamevm = GameViewModel()
     
     var body: some View {
         
@@ -23,19 +23,19 @@ struct StartGameView: View {
             HStack(spacing: 50){
                 VStack{
                     Text("Home Team")
-                    Picker("Pick", selection: $game.playerOne){
+                    Picker("Pick", selection: $gamevm.playerOne){
                         ForEach(playerStats,id: \.self){
                             Text($0.name!).tag($0 as Player?)
                         }
                     }
           
-                    Picker("Pick", selection: $game.playerTwo){
+                    Picker("Pick", selection: $gamevm.playerTwo){
                         ForEach(playerStats,id: \.self){
                             Text($0.name!).tag($0 as Player?)
                         }
                     }
            
-                    Picker("Pick", selection: $game.playerThree){
+                    Picker("Pick", selection: $gamevm.playerThree){
                         ForEach(playerStats,id: \.self){
                             Text($0.name!).tag($0 as Player?)
                         }
@@ -44,18 +44,18 @@ struct StartGameView: View {
                 }
                 VStack{
                     Text("Away Team")
-                    Picker("Pick", selection: $game.playerFour){
+                    Picker("Pick", selection: $gamevm.playerFour){
                         ForEach(playerStats,id: \.self){
                             Text($0.name!).tag($0 as Player?)
                         }
                     }
                  
-                    Picker("Pick", selection: $game.playerFive){
+                    Picker("Pick", selection: $gamevm.playerFive){
                         ForEach(playerStats,id: \.self){
                             Text($0.name!).tag($0 as Player?)
                         }
                     }
-                    Picker("Pick", selection: $game.playerSix){
+                    Picker("Pick", selection: $gamevm.playerSix){
                         ForEach(playerStats,id: \.self){
                             Text($0.name!).tag($0 as Player?)
                         }
@@ -65,14 +65,14 @@ struct StartGameView: View {
             }
             
             playGameButton
-                .disabled(game.okToContinue == false)
+                .disabled(gamevm.okToContinue == false)
             
         }
         
       
     }
     var playGameButton: some View{
-        NavigationLink(destination: ScoreboardView()){
+        NavigationLink(destination: ScoreboardView(gvm: gamevm)){
             HStack{
                 Text("LETS PLAY")
                 Image(systemName: "play")
@@ -82,11 +82,12 @@ struct StartGameView: View {
     
     var ready: some View{
         Button("READY"){
-            game.addPlayers()
+            gamevm.addPlayers()
             
         }
        
     }
+    
     let avm = AddPlayerViewModel()
     var addPlayerButton: some View{
        

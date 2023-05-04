@@ -9,29 +9,29 @@ import SwiftUI
 
 struct ScoreboardView: View {
     
-    @StateObject var svm = ScoreboardViewModel()
+    @StateObject var gvm: GameViewModel
     
     var body: some View {
         VStack{
-            GameScoreView()
+            GameScoreView(gvm: gvm)
             ScrollView{
                 Text("Home")
-                PlayerLabelView(player: svm.playerOne!)
-                PlayerLabelView(player: svm.playerTwo!)
-                PlayerLabelView(player: svm.playerThree!)
+                PlayerLabelView(player: gvm.playerOne!, gvm: gvm)
+                PlayerLabelView(player: gvm.playerTwo!, gvm: gvm)
+                PlayerLabelView(player: gvm.playerThree!, gvm: gvm)
                 Spacer()
                 Text("Away")
-                PlayerLabelView(player: svm.playerFour!)
-                PlayerLabelView(player: svm.playerFive!)
-                PlayerLabelView(player: svm.playerSix!)
+                PlayerLabelView(player: gvm.playerFour!, gvm: gvm)
+                PlayerLabelView(player: gvm.playerFive!, gvm: gvm)
+                PlayerLabelView(player: gvm.playerSix!, gvm: gvm)
                
             }
         }
     }
 }
 
-struct ScoreboardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScoreboardView()
-    }
-}
+//struct ScoreboardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ScoreboardView()
+//    }
+//}

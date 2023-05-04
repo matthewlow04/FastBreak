@@ -11,7 +11,7 @@ struct AddPlayerView: View {
    
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var managedObjContext
-    
+    @State private var showingAlert = false
     
     @ObservedObject var viewModel: AddPlayerViewModel
     
@@ -37,7 +37,12 @@ struct AddPlayerView: View {
                 Section{
                     Button("Add Player") {
                         DataController().addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
+                        showingAlert = true
                         dismiss()
+                        
+                    }
+                    .alert("Player saved", isPresented: $showingAlert){
+                        Button("OK", role: .cancel) {}
                     }
                 }
             }
