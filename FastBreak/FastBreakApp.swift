@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct FastBreakApp: App {
     
-    @StateObject var dataController = DataController()
+    @StateObject var dataController = DataController.shared
     var body: some Scene {
         WindowGroup {
             HomeView()

@@ -11,7 +11,7 @@ struct StatsView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: []) var playerStats: FetchedResults<Player>
     
-    @StateObject var vm = DataController()
+    @StateObject var vm = DataController.shared
     
     
     var body: some View {

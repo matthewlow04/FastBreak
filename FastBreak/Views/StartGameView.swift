@@ -12,8 +12,8 @@ import SwiftUI
 struct StartGameView: View {
     @FetchRequest(sortDescriptors: []) var playerStats: FetchedResults<Player>
     @Environment(\.managedObjectContext) var managedObjContext
-    @StateObject var vm = DataController()
-    @ObservedObject var gamevm = GameViewModel()
+    @StateObject var vm = DataController.shared
+    @StateObject var gamevm = GameViewModel()
     
     var body: some View {
         

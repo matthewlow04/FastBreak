@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerLabelView: View {
-    var player: Player
+    @ObservedObject var player: Player
     @StateObject var gvm: GameViewModel
     
     var body: some View {
@@ -20,43 +20,40 @@ struct PlayerLabelView: View {
                 
                 Text("Pts")
                 Text("\(player.points)")
-                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "point", player: player)})
+                    
             }
-            .frame(width: 50, height: 50)
-            VStack{
-                Text("Rbd")
-                Text("\(player.assists)")
-                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "rebound", player: player)})
-            }
+            .onTapGesture(perform: {gvm.scoreboardMove(sender: "point", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Ast")
-                Text("\(player.rebounds)")
-                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "assist", player: player)})
+                Text("\(player.assists)")
+                    
             }
+            .onTapGesture(perform: {gvm.scoreboardMove(sender: "assist", player: player)})
+            .frame(width: 50, height: 50)
+            VStack{
+                Text("Reb")
+                Text("\(player.rebounds)")
+                    
+            }
+            .onTapGesture(perform: {gvm.scoreboardMove(sender: "rebound", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Stl")
                 Text("\(player.steals)")
-                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "steal", player: player)})
+                    
             }
+            .onTapGesture(perform: {gvm.scoreboardMove(sender: "steal", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Blk")
                 Text("\(player.blocks)")
-                    .onTapGesture(perform: {gvm.scoreboardMove(sender: "block", player: player)})
             }
+            .onTapGesture(perform: {gvm.scoreboardMove(sender: "block", player: player)})
             .frame(width: 50, height: 50)
         }
     }
     
-    var add: some View{
-        Button(action: {
-            
-        }, label: {
-            Image(systemName: "plus.circle")
-        })
-    }
 }
 
 /*
