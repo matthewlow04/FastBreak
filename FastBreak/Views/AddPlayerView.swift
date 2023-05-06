@@ -37,6 +37,7 @@ struct AddPlayerView: View {
                 Section{
                     Button("Add Player") {
                         DataController.shared.addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
+                        
                         showingAlert = true
                         dismiss()
                         

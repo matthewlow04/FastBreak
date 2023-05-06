@@ -46,6 +46,7 @@ class GameViewModel: ObservableObject{
     @Published var playersInGame = [Player]()
     @Published var homeTeam = Team(name: "Home", players: [])
     @Published var awayTeam = Team(name: "Away", players: [])
+    @Published var showingAlert = false
     
     func addPlayers(){
         if (playerOne != nil && playerTwo != nil && playerThree != nil && playerFour != nil && playerFive != nil && playerSix != nil){
@@ -134,6 +135,30 @@ class GameViewModel: ObservableObject{
     
     func finishGame(context: NSManagedObjectContext){
         
+        if homeTeam.teamPoints == awayTeam.teamPoints{
+            showingAlert = true
+            return
+        }
+        
+        if homeTeam.teamPoints > awayTeam.teamPoints{
+            for player in homeTeam.players{
+                player.wins += 1
+            }
+            for player in awayTeam.players{
+                player.losses += 1
+            }
+        }
+        else{
+            for player in homeTeam.players{
+                player.losses += 1
+            }
+            for player in awayTeam.players{
+                player.wins += 1
+            }
+        }
+        
+       
+        
         for player in playersInGame {
             player.totalPoints += player.points
             player.totalAssists += player.assists
@@ -147,6 +172,7 @@ class GameViewModel: ObservableObject{
         
         DataController.shared.save(context: context)
         
+       
         
     }
     

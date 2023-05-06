@@ -26,35 +26,36 @@ struct HomeView: View {
         }
         
     }
-}
-var playButton: some View {
-    
-    NavigationLink(destination: StartGameView()) {
-        HStack{
-            Text("PLAY")
-            Image(systemName: "play")
+    var playButton: some View {
+        
+        NavigationLink(destination: StartGameView()) {
+            HStack{
+                Text("PLAY")
+                Image(systemName: "play")
+            }
         }
     }
-}
-let addPlayer = AddPlayerViewModel()
-var addButton: some View{
-   
-    NavigationLink(destination: AddPlayerView(viewModel: addPlayer)){
-        HStack{
-            Text("ADD PLAYERS")
-            Image(systemName: "play")
+    let addPlayer = AddPlayerViewModel()
+    var addButton: some View{
+       
+        NavigationLink(destination: AddPlayerView(viewModel: addPlayer)){
+            HStack{
+                Text("ADD PLAYERS")
+                Image(systemName: "play")
+            }
         }
     }
-}
 
 
-var statsButton: some View{
-    NavigationLink(destination: StatsView()){
-        HStack{
-            Text("STATS")
-            Image(systemName: "play")
+    var statsButton: some View{
+        NavigationLink(destination: StatsView()){
+            HStack{
+                Text("STATS")
+                Image(systemName: "play")
+            }
         }
     }
+
 }
 
 

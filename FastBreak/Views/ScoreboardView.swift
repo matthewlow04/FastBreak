@@ -34,6 +34,9 @@ struct ScoreboardView: View {
         Button("Finish Game"){
             gvm.finishGame(context: managedObjContext)
         }
+        .alert("You can't end game on a tie", isPresented: $gvm.showingAlert) {
+                    Button("OK", role: .cancel) { }
+                }
     }
 }
 

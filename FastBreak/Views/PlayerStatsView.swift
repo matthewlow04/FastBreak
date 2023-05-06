@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct PlayerStatsView: View {
     
     
@@ -37,8 +38,24 @@ struct PlayerStatsView: View {
             }
       
          }.padding()
-        
-        StatsListView(gamesPlayed: currentPlayer.games ,stats: playerAttributesValue(), statNames: playerAttributeNames)
+        Form{
+            Section{
+                StatsListView(gamesPlayed: currentPlayer.games ,stats: playerAttributesValue(), statNames: playerAttributeNames)
+            }
+            Section{
+
+                HStack(spacing: 50){
+                    Text("\(currentPlayer.wins.clean) wins")
+                        .foregroundColor(Color.green)
+                    Spacer()
+                    Text("\(currentPlayer.losses.clean) losses")
+                        .foregroundColor(Color.red)
+                }
+
+            }
+        }
+       
+       
         
        
     }
@@ -104,6 +121,8 @@ struct StatsListView:View{
         
     }
 }
+
+
 
 //struct PlayerStatsView_Previews: PreviewProvider {
 //    static var previews: some View {
