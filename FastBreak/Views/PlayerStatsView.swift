@@ -26,12 +26,18 @@ struct PlayerStatsView: View {
                  .font(.title)
             HStack() {
                 Text(currentPlayer.position!)
-                 .font(.subheadline)
+                
                 Spacer()
-                Text(getTitle(player: currentPlayer))
+                VStack{
+                    Text(getTitle(player: currentPlayer))
+                    Text("\(currentPlayer.games.clean) Games Played")
+                } .font(.subheadline)
+               
+                
             }
       
          }.padding()
+        
         StatsListView(gamesPlayed: currentPlayer.games ,stats: playerAttributesValue(), statNames: playerAttributeNames)
         
        
@@ -76,6 +82,7 @@ struct CircleImage: View {
 }
 
 struct StatsListView:View{
+    
     var gamesPlayed: Float
     var stats: [Float]
     var statNames: [String]
@@ -86,7 +93,7 @@ struct StatsListView:View{
                     HStack{
                         Text(stat.0)
                         Spacer()
-                        Text("\(stat.1/gamesPlayed)")
+                        Text(String(format: "%.2f", stat.1/gamesPlayed))
                     }
                     
                 }
