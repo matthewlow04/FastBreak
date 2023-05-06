@@ -18,7 +18,7 @@ struct StartGameView: View {
     var body: some View {
         
         VStack {
-            addPlayerButton
+            
             
             HStack(spacing: 50){
                 VStack{
@@ -63,6 +63,9 @@ struct StartGameView: View {
                    
                 }
             }
+            .toolbar{
+                addPlayerButton
+            }
             
             playGameButton
                 .disabled(gamevm.okToContinue == false)
@@ -90,12 +93,8 @@ struct StartGameView: View {
     
     let avm = AddPlayerViewModel()
     var addPlayerButton: some View{
-       
         NavigationLink(destination: AddPlayerView(viewModel: avm)){
-            HStack{
-                Text("ADD PLAYERS")
-                Image(systemName: "play")
-            }
+            Text("New Player")
         }
     }
     
