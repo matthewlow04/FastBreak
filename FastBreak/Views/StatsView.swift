@@ -18,7 +18,7 @@ struct StatsView: View {
 
         List{
             ForEach(playerStats){ player in
-                NavigationLink(destination: Text("Edit Player View")){
+                NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
                     HStack{
                         VStack(alignment: .leading, spacing: 6){
                             Text(player.name!)
