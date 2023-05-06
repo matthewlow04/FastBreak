@@ -87,11 +87,11 @@
 		34D5A85E29F0647A00FFEF75 /* FastBreak */ = {
 			isa = PBXGroup;
 			children = (
-				343637B02A05CCAE0039FE4E /* Tools */,
 				34D5A87D29F06DAB00FFEF75 /* Views */,
 				34D5A87C29F06D9F00FFEF75 /* ViewModels */,
 				34D5A87029F0650D00FFEF75 /* Models */,
 				34D5A85F29F0647A00FFEF75 /* FastBreakApp.swift */,
+				343637B02A05CCAE0039FE4E /* Tools */,
 				34D5A86329F0648000FFEF75 /* Assets.xcassets */,
 				34D5A86529F0648000FFEF75 /* Preview Content */,
 			);

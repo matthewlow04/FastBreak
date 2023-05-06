@@ -132,5 +132,23 @@ class GameViewModel: ObservableObject{
         clearStats()
     }
     
+    func finishGame(context: NSManagedObjectContext){
+        
+        for player in playersInGame {
+            player.totalPoints += player.points
+            player.totalAssists += player.assists
+            player.totalRebounds += player.rebounds
+            player.totalSteals += player.steals
+            player.totalBlocks += player.blocks
+            player.games += 1
+        }
+        
+        clearStats()
+        
+        DataController.shared.save(context: context)
+        
+        
+    }
+    
 }
 
