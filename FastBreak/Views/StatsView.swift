@@ -8,10 +8,43 @@
 import SwiftUI
 
 struct StatsView: View {
+    @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: []) var playerStats: FetchedResults<Player>
+    
+    @StateObject var vm = DataController.shared
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        List{
+            ForEach(playerStats){ player in
+                NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
+                    HStack{
+                        VStack(alignment: .leading, spacing: 6){
+                            Text(player.name!)
+                                .bold()
+                            Text(player.position!)
+                        }
+                       
+                    }
+                }
+            }
+            .onDelete(perform: deletePlayer)
+        }.navigationTitle(Text("Player Stats"))
+        
+        
+        
     }
+    
+    private func deletePlayer(offsets: IndexSet){
+        offsets.map {playerStats[$0]}.forEach(managedObjContext.delete)
+        vm.save(context: managedObjContext)
+    }
+    
+   
+   
 }
+
 
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {

@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-
 struct HomeView: View {
+    
     
     var body: some View {
         NavigationView{
@@ -28,6 +28,7 @@ struct HomeView: View {
     }
 }
 var playButton: some View {
+    
     NavigationLink(destination: StartGameView()) {
         HStack{
             Text("PLAY")
@@ -35,9 +36,10 @@ var playButton: some View {
         }
     }
 }
-
+let addPlayer = AddPlayerViewModel()
 var addButton: some View{
-    NavigationLink(destination: AddPlayerView()){
+   
+    NavigationLink(destination: AddPlayerView(viewModel: addPlayer)){
         HStack{
             Text("ADD PLAYERS")
             Image(systemName: "play")

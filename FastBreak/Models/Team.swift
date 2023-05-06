@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team{
+struct Team: Hashable{
     var name: String
     var players: [Player]
     var teamPoints = 0
@@ -33,4 +33,5 @@ struct Team{
         
         return contains
     }
+    
 }

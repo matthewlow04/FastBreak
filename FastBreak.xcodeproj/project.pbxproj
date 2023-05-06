@@ -7,32 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343637B22A05CCC40039FE4E /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B12A05CCC40039FE4E /* NumberFormatter.swift */; };
+		34B213A02A05B4ED0056FFC6 /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */; };
+		34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1A2A0301E90019A842 /* ScoreboardView.swift */; };
+		34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1C2A0302230019A842 /* PlayerLabelView.swift */; };
+		34D06F212A0308B40019A842 /* GameScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F202A0308B40019A842 /* GameScoreView.swift */; };
+		34D06F242A038A680019A842 /* PlayerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F222A038A680019A842 /* PlayerModel.xcdatamodeld */; };
 		34D5A86029F0647A00FFEF75 /* FastBreakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A85F29F0647A00FFEF75 /* FastBreakApp.swift */; };
 		34D5A86229F0647A00FFEF75 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A86129F0647A00FFEF75 /* HomeView.swift */; };
 		34D5A86429F0648000FFEF75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A86329F0648000FFEF75 /* Assets.xcassets */; };
 		34D5A86729F0648000FFEF75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D5A86629F0648000FFEF75 /* Preview Assets.xcassets */; };
-		34D5A87329F0651D00FFEF75 /* PlayerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */; };
 		34D5A87529F065CF00FFEF75 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87429F065CF00FFEF75 /* DataController.swift */; };
 		34D5A87929F0686E00FFEF75 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87829F0686E00FFEF75 /* Team.swift */; };
 		34D5A87B29F0699900FFEF75 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87A29F0699900FFEF75 /* Game.swift */; };
 		34D5A87F29F06E1D00FFEF75 /* StartGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A87E29F06E1D00FFEF75 /* StartGameView.swift */; };
 		34D5A88129F06E2C00FFEF75 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88029F06E2C00FFEF75 /* AddPlayerView.swift */; };
 		34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88229F06E3300FFEF75 /* StatsView.swift */; };
+		34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085229F6DE4000CC24DB /* GameViewModel.swift */; };
+		34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343637B12A05CCC40039FE4E /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
+		34D06F1A2A0301E90019A842 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
+		34D06F1C2A0302230019A842 /* PlayerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLabelView.swift; sourceTree = "<group>"; };
+		34D06F202A0308B40019A842 /* GameScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreView.swift; sourceTree = "<group>"; };
+		34D06F232A038A680019A842 /* PlayerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerModel.xcdatamodel; sourceTree = "<group>"; };
 		34D5A85C29F0647A00FFEF75 /* FastBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D5A85F29F0647A00FFEF75 /* FastBreakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastBreakApp.swift; sourceTree = "<group>"; };
 		34D5A86129F0647A00FFEF75 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		34D5A86329F0648000FFEF75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D5A86629F0648000FFEF75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		34D5A87229F0651D00FFEF75 /* PlayerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerModel.xcdatamodel; sourceTree = "<group>"; };
 		34D5A87429F065CF00FFEF75 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		34D5A87829F0686E00FFEF75 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		34D5A87A29F0699900FFEF75 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		34D5A87E29F06E1D00FFEF75 /* StartGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameView.swift; sourceTree = "<group>"; };
 		34D5A88029F06E2C00FFEF75 /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
 		34D5A88229F06E3300FFEF75 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		34E7085229F6DE4000CC24DB /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343637B02A05CCAE0039FE4E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				343637B12A05CCC40039FE4E /* NumberFormatter.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		34D5A85329F0647A00FFEF75 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +87,7 @@
 		34D5A85E29F0647A00FFEF75 /* FastBreak */ = {
 			isa = PBXGroup;
 			children = (
+				343637B02A05CCAE0039FE4E /* Tools */,
 				34D5A87D29F06DAB00FFEF75 /* Views */,
 				34D5A87C29F06D9F00FFEF75 /* ViewModels */,
 				34D5A87029F0650D00FFEF75 /* Models */,
@@ -86,10 +109,9 @@
 		34D5A87029F0650D00FFEF75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */,
-				34D5A87429F065CF00FFEF75 /* DataController.swift */,
 				34D5A87829F0686E00FFEF75 /* Team.swift */,
 				34D5A87A29F0699900FFEF75 /* Game.swift */,
+				34D06F222A038A680019A842 /* PlayerModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +119,9 @@
 		34D5A87C29F06D9F00FFEF75 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				34E7085229F6DE4000CC24DB /* GameViewModel.swift */,
+				34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */,
+				34D5A87429F065CF00FFEF75 /* DataController.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -108,6 +133,10 @@
 				34D5A87E29F06E1D00FFEF75 /* StartGameView.swift */,
 				34D5A88029F06E2C00FFEF75 /* AddPlayerView.swift */,
 				34D5A88229F06E3300FFEF75 /* StatsView.swift */,
+				34D06F1A2A0301E90019A842 /* ScoreboardView.swift */,
+				34D06F202A0308B40019A842 /* GameScoreView.swift */,
+				34D06F1C2A0302230019A842 /* PlayerLabelView.swift */,
+				34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,14 +211,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D5A87329F0651D00FFEF75 /* PlayerModel.xcdatamodeld in Sources */,
+				34D06F212A0308B40019A842 /* GameScoreView.swift in Sources */,
 				34D5A87B29F0699900FFEF75 /* Game.swift in Sources */,
 				34D5A87529F065CF00FFEF75 /* DataController.swift in Sources */,
+				34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */,
+				34B213A02A05B4ED0056FFC6 /* PlayerStatsView.swift in Sources */,
+				34D06F242A038A680019A842 /* PlayerModel.xcdatamodeld in Sources */,
 				34D5A87F29F06E1D00FFEF75 /* StartGameView.swift in Sources */,
 				34D5A86229F0647A00FFEF75 /* HomeView.swift in Sources */,
 				34D5A87929F0686E00FFEF75 /* Team.swift in Sources */,
 				34D5A86029F0647A00FFEF75 /* FastBreakApp.swift in Sources */,
 				34D5A88129F06E2C00FFEF75 /* AddPlayerView.swift in Sources */,
+				34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */,
+				34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */,
+				343637B22A05CCC40039FE4E /* NumberFormatter.swift in Sources */,
+				34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */,
 				34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,12 +429,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		34D5A87129F0651D00FFEF75 /* PlayerModel.xcdatamodeld */ = {
+		34D06F222A038A680019A842 /* PlayerModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				34D5A87229F0651D00FFEF75 /* PlayerModel.xcdatamodel */,
+				34D06F232A038A680019A842 /* PlayerModel.xcdatamodel */,
 			);
-			currentVersion = 34D5A87229F0651D00FFEF75 /* PlayerModel.xcdatamodel */;
+			currentVersion = 34D06F232A038A680019A842 /* PlayerModel.xcdatamodel */;
 			path = PlayerModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -16,7 +16,7 @@ enum GameAction{
 }
 
 struct Game{
-    var targetScore: Int
+    var targetScore = 11
     var homeTeam: Team
     var awayTeam: Team
     
@@ -26,6 +26,13 @@ struct Game{
         self.targetScore = targetScore
     }
     
+    func checkGame(){
+        if(homeTeam.teamPoints >= targetScore || awayTeam.teamPoints >= targetScore){
+            
+        }
+    }
+    
 }
+
 
 

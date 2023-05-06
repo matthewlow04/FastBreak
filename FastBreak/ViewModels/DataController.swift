@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 class DataController: ObservableObject{
+    
+    static let shared = DataController()
     let container = NSPersistentContainer(name: "PlayerModel")
     
     init(){
@@ -34,14 +36,12 @@ class DataController: ObservableObject{
         let player = Player(context: context)
         player.name = name
         player.position = position
-        player.id = UUID()
+        player.id = UUID() //new food so new id
         save(context: context)
     }
     
-    //change player name or position
-    func editPlayer(player: Player, position:String, name: String, context: NSManagedObjectContext){
+    func editPlayer(player: Player, name: String, context: NSManagedObjectContext){
         player.name = name
-        player.position = position
         save(context: context)
         
     }

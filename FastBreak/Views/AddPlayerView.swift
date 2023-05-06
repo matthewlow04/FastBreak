@@ -8,13 +8,53 @@
 import SwiftUI
 
 struct AddPlayerView: View {
+   
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.managedObjectContext) var managedObjContext
+    @State private var showingAlert = false
+    
+    @ObservedObject var viewModel: AddPlayerViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            Form{
+                Section{
+                    HStack{
+                        Text("Name: ")
+                        TextField("Name", text: $viewModel.name)
+                    }
+                }
+                Section{
+                    Picker("Select a position", selection: $viewModel.selection){
+                        ForEach(viewModel.positions, id: \.self){
+                            Text($0)
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                }header: {
+                    Text("Position")
+                }
+                Section{
+                    Button("Add Player") {
+                        DataController.shared.addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
+                        showingAlert = true
+                        dismiss()
+                        
+                    }
+                    .alert("Player saved", isPresented: $showingAlert){
+                        Button("OK", role: .cancel) {}
+                    }
+                }
+            }
+            .navigationTitle("Add Player")
+        }
     }
 }
 
+
 struct AddPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        AddPlayerView()
+        let viewModel = AddPlayerViewModel()
+        AddPlayerView(viewModel: viewModel)
     }
 }
