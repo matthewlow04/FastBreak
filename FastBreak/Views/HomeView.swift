@@ -23,6 +23,7 @@ struct HomeView: View {
                     .padding()
      
             }
+            .foregroundColor(CustomColor.smokyBlack)
         }
         
     }

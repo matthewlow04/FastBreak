@@ -157,8 +157,6 @@ class GameViewModel: ObservableObject{
             }
         }
         
-       
-        
         for player in playersInGame {
             player.totalPoints += player.points
             player.totalAssists += player.assists
@@ -168,12 +166,11 @@ class GameViewModel: ObservableObject{
             player.games += 1
         }
         
+       
         clearStats()
         
         DataController.shared.save(context: context)
-        
-       
-        
+
     }
     
 }

@@ -10,8 +10,6 @@ import SwiftUI
 struct ScoreboardView: View {
     
     @StateObject var gvm: GameViewModel
-    @Environment(\.managedObjectContext) var managedObjContext
-    @StateObject var vm = DataController.shared
     
     var body: some View {
         VStack{
@@ -28,15 +26,7 @@ struct ScoreboardView: View {
                 PlayerLabelView(player: gvm.playerSix!, gvm: gvm)
                
             }
-            
         }
-        
-        Button("Finish Game"){
-            gvm.finishGame(context: managedObjContext)
-        }
-        .alert("You can't end game on a tie", isPresented: $gvm.showingAlert) {
-                    Button("OK", role: .cancel) { }
-                }
     }
 }
 
