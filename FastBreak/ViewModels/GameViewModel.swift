@@ -47,7 +47,7 @@ class GameViewModel: ObservableObject{
     @Published var homeTeam = Team(name: "Home", players: [])
     @Published var awayTeam = Team(name: "Away", players: [])
     @Published var showingAlert = false
-    
+    @Published var showingFinishGameAlert = false
     func addPlayers(){
         if (playerOne != nil && playerTwo != nil && playerThree != nil && playerFour != nil && playerFive != nil && playerSix != nil){
             homeTeam.players.removeAll()
@@ -165,6 +165,8 @@ class GameViewModel: ObservableObject{
             player.totalBlocks += player.blocks
             player.games += 1
         }
+        
+        showingFinishGameAlert = true
         
        
         clearStats()

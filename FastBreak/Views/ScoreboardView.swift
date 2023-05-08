@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScoreboardView: View {
-    
+    @Environment(\.managedObjectContext) var managedObjContext
     @StateObject var gvm: GameViewModel
     
     var body: some View {
@@ -26,6 +26,19 @@ struct ScoreboardView: View {
                 PlayerLabelView(player: gvm.playerSix!, gvm: gvm)
                
             }
+            
+            Button("Finish Game"){
+                gvm.finishGame(context: managedObjContext)
+            }
+            .alert("Good Game! Final Score: Home: \(gvm.homeTeam.teamPoints) - Away: \(gvm.awayTeam.teamPoints)", isPresented: $gvm.showingAlert) {
+                        Button("OK", role: .cancel) {
+                            gvm.awayTeam.teamPoints = 0
+                            gvm.homeTeam.teamPoints = 0
+                        }
+                    }
+            .alert("You can't end game on a tie", isPresented: $gvm.showingAlert) {
+                        Button("OK", role: .cancel) { }
+                    }
         }
     }
 }
