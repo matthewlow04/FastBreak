@@ -168,7 +168,6 @@ class GameViewModel: ObservableObject{
         
         showingFinishGameAlert = true
         
-       
         clearStats()
         
         DataController.shared.save(context: context)

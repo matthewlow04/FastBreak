@@ -30,10 +30,12 @@ struct ScoreboardView: View {
             Button("Finish Game"){
                 gvm.finishGame(context: managedObjContext)
             }
-            .alert("Good Game! Final Score: Home: \(gvm.homeTeam.teamPoints) - Away: \(gvm.awayTeam.teamPoints)", isPresented: $gvm.showingAlert) {
+            .alert("Good Game! Final Score: Home: \(gvm.homeTeam.teamPoints) - Away: \(gvm.awayTeam.teamPoints)", isPresented: $gvm.showingFinishGameAlert) {
                         Button("OK", role: .cancel) {
                             gvm.awayTeam.teamPoints = 0
                             gvm.homeTeam.teamPoints = 0
+                            NavigationUtil.popToRootView()
+                            
                         }
                     }
             .alert("You can't end game on a tie", isPresented: $gvm.showingAlert) {

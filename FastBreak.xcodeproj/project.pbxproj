@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		343637B22A05CCC40039FE4E /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B12A05CCC40039FE4E /* NumberFormatter.swift */; };
 		343637B62A095B9B0039FE4E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B52A095B9B0039FE4E /* Theme.swift */; };
+		343637B82A09A4B00039FE4E /* PopToRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B72A09A4B00039FE4E /* PopToRootView.swift */; };
 		34B213A02A05B4ED0056FFC6 /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */; };
 		34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1A2A0301E90019A842 /* ScoreboardView.swift */; };
 		34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1C2A0302230019A842 /* PlayerLabelView.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		343637B12A05CCC40039FE4E /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		343637B52A095B9B0039FE4E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		343637B72A09A4B00039FE4E /* PopToRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootView.swift; sourceTree = "<group>"; };
 		34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
 		34D06F1A2A0301E90019A842 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		34D06F1C2A0302230019A842 /* PlayerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLabelView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				343637B12A05CCC40039FE4E /* NumberFormatter.swift */,
 				343637B52A095B9B0039FE4E /* Theme.swift */,
+				343637B72A09A4B00039FE4E /* PopToRootView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D06F212A0308B40019A842 /* GameScoreView.swift in Sources */,
+				343637B82A09A4B00039FE4E /* PopToRootView.swift in Sources */,
 				34D5A87B29F0699900FFEF75 /* Game.swift in Sources */,
 				34D5A87529F065CF00FFEF75 /* DataController.swift in Sources */,
 				34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */,
