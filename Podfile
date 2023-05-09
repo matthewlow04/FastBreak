@@ -7,5 +7,6 @@ target 'FastBreak' do
 
   # Pods for FastBreak
   pod 'Charts'
+  pod 'ViewAnimator'
 
 end
