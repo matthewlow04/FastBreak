@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+
 struct HomeView: View {
     
-    
+    @State var scale = 1.0
     var body: some View {
         NavigationView{
             VStack{
@@ -24,8 +25,12 @@ struct HomeView: View {
      
             }
             .foregroundColor(CustomColor.smokyBlack)
+            .scaleEffect(scale)
+            .onAppear {
+                withAnimation {scale = 0.9}
+            }
+
         }
-        
     }
     var playButton: some View {
         

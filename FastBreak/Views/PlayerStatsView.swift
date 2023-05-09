@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ViewAnimator
 
 
 struct PlayerStatsView: View {
@@ -22,6 +23,7 @@ struct PlayerStatsView: View {
         VStack{
             CircleImage(picture: picture)
         }
+        
         VStack(alignment: .leading){
             Text(currentPlayer.name!)
                  .font(.title)

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ScoreboardView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @StateObject var gvm: GameViewModel

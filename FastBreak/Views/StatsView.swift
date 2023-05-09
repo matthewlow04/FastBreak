@@ -5,6 +5,7 @@
 //  Created by Matthew Low on 2023-04-19.
 //
 
+import Charts
 import SwiftUI
 
 struct StatsView: View {
@@ -30,6 +31,7 @@ struct StatsView: View {
                 }
             }
             .onDelete(perform: deletePlayer)
+            
         }.navigationTitle(Text("Player Stats"))
         
         
