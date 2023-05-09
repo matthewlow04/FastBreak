@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 
 struct PlayerStatsView: View {
@@ -14,6 +15,7 @@ struct PlayerStatsView: View {
     var currentPlayer: Player
     var picture = "avatar"
     var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks"]
+    lazy var winAndLoss = [currentPlayer.wins, currentPlayer.losses]
     lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks]
     
    
@@ -53,9 +55,8 @@ struct PlayerStatsView: View {
                 }
 
             }
+            
         }
-       
-       
         
        
     }
@@ -63,6 +64,11 @@ struct PlayerStatsView: View {
     func playerAttributesValue() -> [Float]{
         var mutableSelf = self
         return mutableSelf.playerAttributes
+    }
+    
+    func winAndLossValues() -> [Float]{
+        var mutableSelf = self
+        return mutableSelf.winAndLoss
     }
     
     func getTitle(player: Player) -> String{
@@ -82,6 +88,10 @@ struct PlayerStatsView: View {
             return "Newbie"
         }
     }
+    
+//    var PieChart: some View{
+//        PieChartData(dataSet: winAndLossValues() as! ChartDataSetProtocol)
+//    }
 }
 
 

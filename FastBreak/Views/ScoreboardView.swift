@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ViewAnimator
 
 struct ScoreboardView: View {
     @Environment(\.managedObjectContext) var managedObjContext
