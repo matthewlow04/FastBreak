@@ -6,5 +6,6 @@ target 'FastBreak' do
   use_frameworks!
 
   # Pods for FastBreak
+  pod 'Charts'
 
 end
