@@ -31,6 +31,7 @@ struct StatsView: View {
                 }
             }
             .onDelete(perform: deletePlayer)
+            
         }.navigationTitle(Text("Player Stats"))
         
         
