@@ -1,0 +1,6 @@
+framework module Pods_FastBreak {
+  umbrella header "Pods-FastBreak-umbrella.h"
+
+  export *
+  module * { export * }
+}
