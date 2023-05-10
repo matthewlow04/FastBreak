@@ -32,10 +32,11 @@ class DataController: ObservableObject{
         }
     }
     
-    func addPlayer(name: String, position: String, context: NSManagedObjectContext) {
+    func addPlayer(name: String, position: String, notes: String, context: NSManagedObjectContext) {
         let player = Player(context: context)
         player.name = name
         player.position = position
+        player.notes = notes
         player.id = UUID() //new food so new id
         save(context: context)
     }

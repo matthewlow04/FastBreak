@@ -13,7 +13,7 @@ struct PlayerStatsView: View {
     
     var currentPlayer: Player
     var picture = "avatar"
-    var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks"]
+    var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks", "TeamPoints"]
     lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks]
     
    
@@ -35,7 +35,7 @@ struct PlayerStatsView: View {
            
         }
         VStack(alignment: .leading){
-            Text(currentPlayer.name!)
+            Text((currentPlayer.name ?? "UnnamedPlayer"))
                  .font(.title)
             HStack() {
                 Text(currentPlayer.position!)
@@ -71,7 +71,7 @@ struct PlayerStatsView: View {
             }
                 
             Section{
-                Text((currentPlayer.notes ?? "None"))
+                Text((currentPlayer.notes!))
             }header: {
                 Text("NOTES")
             }

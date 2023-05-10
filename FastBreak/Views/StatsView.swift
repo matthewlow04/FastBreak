@@ -22,7 +22,7 @@ struct StatsView: View {
                         NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
                             HStack{
                                 VStack(alignment: .leading, spacing: 6){
-                                    Text(player.name!)
+                                    Text((player.name ?? "UnnamedPlayer"))
                                         .bold()
                                     Text(player.position!)
                                 }
@@ -32,7 +32,7 @@ struct StatsView: View {
                     }
                     .onDelete(perform: deletePlayer)
                 }.navigationTitle(Text("Player Stats")).foregroundColor(CustomColor.goldenBrown)
-                Text("Swipe left on player cells toto delete")
+                Text("Swipe left on player cells to delete player")
                     .foregroundColor(CustomColor.goldenBrown)
                     .font(.system(size: 12))
                     
@@ -48,7 +48,7 @@ struct StatsView: View {
     
     private func deletePlayer(offsets: IndexSet){
         offsets.map {playerStats[$0]}.forEach(managedObjContext.delete)
-        
+        showingAlert = true
         vm.save(context: managedObjContext)
     }
     

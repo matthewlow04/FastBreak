@@ -22,7 +22,7 @@ struct AddPlayerView: View {
                     HStack{
                         Text("Name: ")
                         TextField("Name", text: $viewModel.name)
-                            .foregroundColor(CustomColor.dun).opacity(1)
+                            .foregroundColor(CustomColor.chestNut).opacity(1)
                     }
                 }header: {
                     Text("NAME")
@@ -48,10 +48,11 @@ struct AddPlayerView: View {
                 }
                 Section{
                     Button("Add Player") {
-                        DataController.shared.addPlayer(name: viewModel.name, position: viewModel.selection, context: managedObjContext)
+                        DataController.shared.addPlayer(name: viewModel.name, position: viewModel.selection, notes: viewModel.notes, context: managedObjContext)
                         
                         showingAlert = true
                         viewModel.name = ""
+                        viewModel.notes = ""
                         dismiss()
                         
                     }

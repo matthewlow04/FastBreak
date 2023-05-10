@@ -127,6 +127,7 @@ class GameViewModel: ObservableObject{
             player.blocks = 0
             player.steals = 0
         }
+        
     }
     
     func startGame(){
@@ -166,6 +167,22 @@ class GameViewModel: ObservableObject{
             player.totalSteals += player.steals
             player.totalBlocks += player.blocks
             player.games += 1
+        }
+        
+        for player in homeTeam.players{
+            player.teamPoints += Float(homeTeam.teamPoints)
+            player.teamAssists += Float(homeTeam.teamAssists)
+            player.teamRebounds += Float(homeTeam.teamRebounds)
+            player.teamSteals += Float(homeTeam.teamSteals)
+            player.teamBlocks += Float(homeTeam.teamBlocks)
+        }
+        
+        for player in awayTeam.players{
+            player.teamPoints += Float(awayTeam.teamPoints)
+            player.teamAssists += Float(awayTeam.teamAssists)
+            player.teamRebounds += Float(awayTeam.teamRebounds)
+            player.teamSteals += Float(awayTeam.teamSteals)
+            player.teamBlocks += Float(awayTeam.teamBlocks)
         }
         
         showingFinishGameAlert = true

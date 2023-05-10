@@ -10,12 +10,13 @@ import SwiftUI
 struct StartGameBackgroundView: View {
     var body: some View {
             VStack{
+                Spacer()
                 Image("playerOne")
                     .resizable()
                     .frame(width: 100, height: 200)
                     .aspectRatio(contentMode: .fit)
                     .offset(x: -100)
-                Spacer()
+                
             }
         
     }
