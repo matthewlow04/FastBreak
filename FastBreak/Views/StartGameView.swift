@@ -17,60 +17,75 @@ struct StartGameView: View {
     
     var body: some View {
         
-        VStack {
-            Spacer()
-            HStack(spacing: 50){
-                VStack{
-                    Text("Home Team")
-                    Picker("Pick", selection: $gamevm.playerOne){
-                        ForEach(playerStats,id: \.self){
-                            Text($0.name!).tag($0 as Player?)
+        ZStack{
+            StartGameBackgroundView()
+            StartGameBackgroundStripesView()
+            VStack {
+                Spacer()
+                HStack(spacing: 50){
+                    VStack{
+                        Text("Home Team")
+                            .foregroundColor(CustomColor.goldenBrown)
+                        Picker("Pick", selection: $gamevm.playerOne){
+                            ForEach(playerStats,id: \.self){
+                                Text($0.name!).tag($0 as Player?)
+                            }
                         }
-                    }
-          
-                    Picker("Pick", selection: $gamevm.playerTwo){
-                        ForEach(playerStats,id: \.self){
-                            Text($0.name!).tag($0 as Player?)
+              
+                        Picker("Pick", selection: $gamevm.playerTwo){
+                            ForEach(playerStats,id: \.self){
+                                Text($0.name!).tag($0 as Player?)
+                            }
                         }
-                    }
-           
-                    Picker("Pick", selection: $gamevm.playerThree){
-                        ForEach(playerStats,id: \.self){
-                            Text($0.name!).tag($0 as Player?)
+               
+                        Picker("Pick", selection: $gamevm.playerThree){
+                            ForEach(playerStats,id: \.self){
+                                Text($0.name!).tag($0 as Player?)
+                            }
                         }
+                       
                     }
+                    VStack{
+                        Text("Away Team")
+                            .foregroundColor(CustomColor.goldenBrown)
+                        Picker("Pick", selection: $gamevm.playerFour){
+                            ForEach(playerStats,id: \.self){
+                                Text($0.name!).tag($0 as Player?)
+                            }
+                        }
+                     
+                        Picker("Pick", selection: $gamevm.playerFive){
+                            ForEach(playerStats,id: \.self){
+                                Text($0.name!).tag($0 as Player?)
+                            }
+                        }
+                        Picker("Pick", selection: $gamevm.playerSix){
+                            ForEach(playerStats,id: \.self){
+                                Text($0.name!).tag($0 as Player?)
+                            }
+                        }
+                       
+                    }
+                    
                    
-                }
-                VStack{
-                    Text("Away Team")
-                    Picker("Pick", selection: $gamevm.playerFour){
-                        ForEach(playerStats,id: \.self){
-                            Text($0.name!).tag($0 as Player?)
-                        }
-                    }
-                 
-                    Picker("Pick", selection: $gamevm.playerFive){
-                        ForEach(playerStats,id: \.self){
-                            Text($0.name!).tag($0 as Player?)
-                        }
-                    }
-                    Picker("Pick", selection: $gamevm.playerSix){
-                        ForEach(playerStats,id: \.self){
-                            Text($0.name!).tag($0 as Player?)
-                        }
-                    }
-                   
-                }
+                }.font(.system(size: 20))
+                Text("Choose 6 unique players to continue")
+                    .foregroundColor(CustomColor.goldenBrown)
+                    .font(.system(size: 12))
+                    .padding()
+               
+                playGameButton
+                    .disabled(gamevm.okToContinue == false)
+                Spacer()
+                
             }
-            Spacer()
-            playGameButton
-                .disabled(gamevm.okToContinue == false)
-            
+            .navigationTitle("Player Select")
+            .toolbar{
+                addPlayerButton
+            }
         }
-        .navigationTitle("Player Select")
-        .toolbar{
-            addPlayerButton
-        }
+        
+       
         
         
       
@@ -79,6 +94,7 @@ struct StartGameView: View {
         NavigationLink(destination: ScoreboardView(gvm: gamevm)){
             HStack{
                 Text("LETS PLAY")
+                    .font(.title)
                 Image(systemName: "play")
             }
         }
@@ -99,8 +115,9 @@ struct StartGameView: View {
         }
     }
     
-    
 }
+
+
 
 
 

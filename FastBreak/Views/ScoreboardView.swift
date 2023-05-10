@@ -16,20 +16,28 @@ struct ScoreboardView: View {
             GameScoreView(gvm: gvm)
             ScrollView{
                 Text("Home")
+                    .foregroundColor(CustomColor.goldenBrown)
                 PlayerLabelView(player: gvm.playerOne!, gvm: gvm)
+                    .foregroundColor(CustomColor.chestNut)
                 PlayerLabelView(player: gvm.playerTwo!, gvm: gvm)
+                    .foregroundColor(CustomColor.chestNut)
                 PlayerLabelView(player: gvm.playerThree!, gvm: gvm)
+                    .foregroundColor(CustomColor.chestNut)
                 Spacer()
                 Text("Away")
+                    .foregroundColor(CustomColor.goldenBrown)
                 PlayerLabelView(player: gvm.playerFour!, gvm: gvm)
+                    .foregroundColor(CustomColor.chestNut)
                 PlayerLabelView(player: gvm.playerFive!, gvm: gvm)
+                    .foregroundColor(CustomColor.chestNut)
                 PlayerLabelView(player: gvm.playerSix!, gvm: gvm)
+                    .foregroundColor(CustomColor.chestNut)
                
             }
             
             Button("Finish Game"){
                 gvm.finishGame(context: managedObjContext)
-            }
+            }.font(.title)
             .alert("Good Game! Final Score: Home: \(gvm.homeTeam.teamPoints) - Away: \(gvm.awayTeam.teamPoints)", isPresented: $gvm.showingFinishGameAlert) {
                         Button("OK", role: .cancel) {
                             gvm.awayTeam.teamPoints = 0

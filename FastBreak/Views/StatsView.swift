@@ -15,23 +15,28 @@ struct StatsView: View {
     
     
     var body: some View {
-
-        List{
-            ForEach(playerStats){ player in
-                NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
-                    HStack{
-                        VStack(alignment: .leading, spacing: 6){
-                            Text(player.name!)
-                                .bold()
-                            Text(player.position!)
+        ZStack{
+            BackgroundDesignView()
+            List{
+                ForEach(playerStats){ player in
+                    NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
+                        HStack{
+                            VStack(alignment: .leading, spacing: 6){
+                                Text(player.name!)
+                                    .bold()
+                                Text(player.position!)
+                            }
+                           
                         }
-                       
                     }
                 }
-            }
-            .onDelete(perform: deletePlayer)
-        }.navigationTitle(Text("Player Stats"))
-        
+                .onDelete(perform: deletePlayer)
+            }.navigationTitle(Text("Player Stats")).foregroundColor(CustomColor.goldenBrown)
+                
+            
+        }
+
+       
         
         
     }

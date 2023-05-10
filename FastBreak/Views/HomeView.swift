@@ -10,21 +10,26 @@ struct HomeView: View {
     
     
     var body: some View {
+        
         NavigationView{
-            VStack{
-                Text("F A S T B R E A K")
-                    .font(.title)
-                    .padding()
-                playButton
-                    .padding()
-                addButton
-                    .padding()
-                statsButton
-                    .padding()
-     
+            ZStack{
+                BackgroundDesignView()
+                VStack{
+                    Text("F A S T B R E A K")
+                        .font(.title)
+                        .padding()
+                    playButton
+                        .buttonStyle(HomeButtonStyle())
+                    addButton
+                        .buttonStyle(HomeButtonStyle())
+                    statsButton
+                        .buttonStyle(HomeButtonStyle())
+         
+                }
+                .foregroundColor(CustomColor.smokyBlack)
             }
-            .foregroundColor(CustomColor.smokyBlack)
-        }
+           
+        }.accentColor(CustomColor.chestNut)
         
     }
     var playButton: some View {
@@ -34,6 +39,7 @@ struct HomeView: View {
                 Text("PLAY")
                 Image(systemName: "play")
             }
+            .foregroundColor(CustomColor.goldenBrown)
         }
     }
     let addPlayer = AddPlayerViewModel()
@@ -44,6 +50,7 @@ struct HomeView: View {
                 Text("ADD PLAYERS")
                 Image(systemName: "play")
             }
+            .foregroundColor(CustomColor.goldenBrown)
         }
     }
 
@@ -54,6 +61,7 @@ struct HomeView: View {
                 Text("STATS")
                 Image(systemName: "play")
             }
+            .foregroundColor(CustomColor.goldenBrown)
         }
     }
 

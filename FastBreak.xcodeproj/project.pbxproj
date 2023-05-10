@@ -10,6 +10,10 @@
 		343637B22A05CCC40039FE4E /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B12A05CCC40039FE4E /* NumberFormatter.swift */; };
 		343637B62A095B9B0039FE4E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B52A095B9B0039FE4E /* Theme.swift */; };
 		343637B82A09A4B00039FE4E /* PopToRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343637B72A09A4B00039FE4E /* PopToRootView.swift */; };
+		345F694E2A0ACAAB008CCF4F /* BackgroundDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345F694D2A0ACAAB008CCF4F /* BackgroundDesignView.swift */; };
+		345F69502A0B0B1C008CCF4F /* Button Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345F694F2A0B0B1C008CCF4F /* Button Styling.swift */; };
+		345F69522A0B0E60008CCF4F /* StartGameBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345F69512A0B0E60008CCF4F /* StartGameBackgroundView.swift */; };
+		34AC07262A0B15DA000B08DF /* StartGameBackgroundStripesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AC07252A0B15DA000B08DF /* StartGameBackgroundStripesView.swift */; };
 		34B213A02A05B4ED0056FFC6 /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */; };
 		34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1A2A0301E90019A842 /* ScoreboardView.swift */; };
 		34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D06F1C2A0302230019A842 /* PlayerLabelView.swift */; };
@@ -33,6 +37,10 @@
 		343637B12A05CCC40039FE4E /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		343637B52A095B9B0039FE4E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		343637B72A09A4B00039FE4E /* PopToRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootView.swift; sourceTree = "<group>"; };
+		345F694D2A0ACAAB008CCF4F /* BackgroundDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundDesignView.swift; sourceTree = "<group>"; };
+		345F694F2A0B0B1C008CCF4F /* Button Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button Styling.swift"; sourceTree = "<group>"; };
+		345F69512A0B0E60008CCF4F /* StartGameBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameBackgroundView.swift; sourceTree = "<group>"; };
+		34AC07252A0B15DA000B08DF /* StartGameBackgroundStripesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameBackgroundStripesView.swift; sourceTree = "<group>"; };
 		34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
 		34D06F1A2A0301E90019A842 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		34D06F1C2A0302230019A842 /* PlayerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerLabelView.swift; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				343637B12A05CCC40039FE4E /* NumberFormatter.swift */,
+				345F694F2A0B0B1C008CCF4F /* Button Styling.swift */,
 				343637B52A095B9B0039FE4E /* Theme.swift */,
 				343637B72A09A4B00039FE4E /* PopToRootView.swift */,
 			);
@@ -143,6 +152,9 @@
 				34D06F202A0308B40019A842 /* GameScoreView.swift */,
 				34D06F1C2A0302230019A842 /* PlayerLabelView.swift */,
 				34B2139F2A05B4ED0056FFC6 /* PlayerStatsView.swift */,
+				345F694D2A0ACAAB008CCF4F /* BackgroundDesignView.swift */,
+				34AC07252A0B15DA000B08DF /* StartGameBackgroundStripesView.swift */,
+				345F69512A0B0E60008CCF4F /* StartGameBackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,18 +235,22 @@
 				34D5A87529F065CF00FFEF75 /* DataController.swift in Sources */,
 				34D06F1D2A0302230019A842 /* PlayerLabelView.swift in Sources */,
 				34B213A02A05B4ED0056FFC6 /* PlayerStatsView.swift in Sources */,
+				345F69522A0B0E60008CCF4F /* StartGameBackgroundView.swift in Sources */,
 				34D06F242A038A680019A842 /* PlayerModel.xcdatamodeld in Sources */,
 				34D5A87F29F06E1D00FFEF75 /* StartGameView.swift in Sources */,
 				34D5A86229F0647A00FFEF75 /* HomeView.swift in Sources */,
+				345F69502A0B0B1C008CCF4F /* Button Styling.swift in Sources */,
 				34D5A87929F0686E00FFEF75 /* Team.swift in Sources */,
 				34D5A86029F0647A00FFEF75 /* FastBreakApp.swift in Sources */,
 				34D5A88129F06E2C00FFEF75 /* AddPlayerView.swift in Sources */,
+				34AC07262A0B15DA000B08DF /* StartGameBackgroundStripesView.swift in Sources */,
 				34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */,
 				34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */,
 				343637B22A05CCC40039FE4E /* NumberFormatter.swift in Sources */,
 				34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */,
 				34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */,
 				343637B62A095B9B0039FE4E /* Theme.swift in Sources */,
+				345F694E2A0ACAAB008CCF4F /* BackgroundDesignView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,19 @@ struct PlayerStatsView: View {
     
     var body: some View {
         VStack{
-            CircleImage(picture: picture)
+            ZStack(alignment: .bottomTrailing){
+                CircleImage(picture: picture)
+                Image(systemName: "plus")
+                    .foregroundColor(.white)
+                    .frame(width: 50, height: 50)
+                    .background(Color.blue)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                    .offset(x: -10, y: 10)
+                
+            
+            }
+           
         }
         VStack(alignment: .leading){
             Text(currentPlayer.name!)
@@ -38,6 +50,7 @@ struct PlayerStatsView: View {
             }
       
          }.padding()
+            .foregroundColor(CustomColor.goldenBrown)
         Form{
             Section{
                 StatsListView(gamesPlayed: currentPlayer.games ,stats: playerAttributesValue(), statNames: playerAttributeNames)
@@ -53,7 +66,7 @@ struct PlayerStatsView: View {
                 }
 
             }
-        }
+        } .foregroundColor(CustomColor.goldenBrown)
        
        
         
@@ -99,7 +112,6 @@ struct CircleImage: View {
 }
 
 struct StatsListView:View{
-    
     var gamesPlayed: Float
     var stats: [Float]
     var statNames: [String]

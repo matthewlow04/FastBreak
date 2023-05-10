@@ -22,6 +22,7 @@ struct AddPlayerView: View {
                     HStack{
                         Text("Name: ")
                         TextField("Name", text: $viewModel.name)
+                            .foregroundColor(CustomColor.dun).opacity(1)
                     }
                 }
                 Section{
@@ -47,9 +48,10 @@ struct AddPlayerView: View {
                         Button("OK", role: .cancel) {}
                     }
                 }
+                
             }
-            .navigationTitle("Add Player")
-        }
+            .navigationTitle("Add Player").foregroundColor(CustomColor.goldenBrown)
+        }.accentColor(CustomColor.chestNut)
     }
 }
 
