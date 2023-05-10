@@ -54,7 +54,10 @@ struct PlayerStatsView: View {
         Form{
             Section{
                 StatsListView(gamesPlayed: currentPlayer.games ,stats: playerAttributesValue(), statNames: playerAttributeNames)
+            }header: {
+                Text("Averages").bold()
             }
+            
             Section{
 
                 HStack(spacing: 50){
@@ -65,6 +68,12 @@ struct PlayerStatsView: View {
                         .foregroundColor(Color.red)
                 }
 
+            }
+                
+            Section{
+                Text((currentPlayer.notes ?? "None"))
+            }header: {
+                Text("NOTES")
             }
         } .foregroundColor(CustomColor.goldenBrown)
        
@@ -126,8 +135,6 @@ struct StatsListView:View{
                     }
                     
                 }
-            }header: {
-                Text("Averages")
             }
         }
         

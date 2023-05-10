@@ -10,30 +10,35 @@ import SwiftUI
 struct StatsView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: []) var playerStats: FetchedResults<Player>
-    
     @StateObject var vm = DataController.shared
+    @State private var showingAlert = false
     
     
     var body: some View {
-        ZStack{
-            BackgroundDesignView()
-            List{
-                ForEach(playerStats){ player in
-                    NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
-                        HStack{
-                            VStack(alignment: .leading, spacing: 6){
-                                Text(player.name!)
-                                    .bold()
-                                Text(player.position!)
+     
+            VStack{
+                List{
+                    ForEach(playerStats){ player in
+                        NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
+                            HStack{
+                                VStack(alignment: .leading, spacing: 6){
+                                    Text(player.name!)
+                                        .bold()
+                                    Text(player.position!)
+                                }
+                               
                             }
-                           
                         }
                     }
-                }
-                .onDelete(perform: deletePlayer)
-            }.navigationTitle(Text("Player Stats")).foregroundColor(CustomColor.goldenBrown)
-                
-            
+                    .onDelete(perform: deletePlayer)
+                }.navigationTitle(Text("Player Stats")).foregroundColor(CustomColor.goldenBrown)
+                Text("Swipe left on player cells toto delete")
+                    .foregroundColor(CustomColor.goldenBrown)
+                    .font(.system(size: 12))
+                    
+            }  .alert("Player deleted", isPresented: $showingAlert){
+                Button("OK", role: .cancel) {}
+      
         }
 
        
@@ -43,6 +48,7 @@ struct StatsView: View {
     
     private func deletePlayer(offsets: IndexSet){
         offsets.map {playerStats[$0]}.forEach(managedObjContext.delete)
+        
         vm.save(context: managedObjContext)
     }
     

@@ -24,6 +24,8 @@ struct AddPlayerView: View {
                         TextField("Name", text: $viewModel.name)
                             .foregroundColor(CustomColor.dun).opacity(1)
                     }
+                }header: {
+                    Text("NAME")
                 }
                 Section{
                     Picker("Select a position", selection: $viewModel.selection){
@@ -33,7 +35,16 @@ struct AddPlayerView: View {
                         .pickerStyle(.segmented)
                     }
                 }header: {
-                    Text("Position")
+                    Text("POSITION")
+                }
+                Section{
+                    HStack{
+                        Text("Notes: ")
+                        TextField("Add custom notes", text: $viewModel.notes)
+                            .foregroundColor(CustomColor.dun).opacity(1)
+                    }
+                }header: {
+                    Text("NOTES")
                 }
                 Section{
                     Button("Add Player") {
