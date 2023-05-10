@@ -7,11 +7,17 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="losses" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="picture" optional="YES" attributeType="String"/>
         <attribute name="points" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="position" optional="YES" attributeType="String"/>
         <attribute name="rebounds" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="steals" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="teamAssists" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="teamBlocks" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="teamPoints" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="teamRebounds" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="teamSteals" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="totalAssists" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="totalBlocks" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="totalPoints" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
@@ -23,6 +29,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Player" positionX="-63" positionY="-18" width="128" height="284"/>
+        <element name="Player" positionX="-63" positionY="-18" width="128" height="374"/>
     </elements>
 </model>

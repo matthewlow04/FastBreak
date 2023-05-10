@@ -12,6 +12,7 @@ struct Team: Hashable{
     var players: [Player]
     var teamPoints = 0
     
+    
     init(name: String, players: [Player]){
         self.players = []
         self.name = name

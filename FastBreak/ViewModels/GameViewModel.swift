@@ -102,6 +102,7 @@ class GameViewModel: ObservableObject{
         case "assist":
             player.assists += 1
             
+            
         case "rebound":
             player.rebounds += 1
             
@@ -156,6 +157,7 @@ class GameViewModel: ObservableObject{
                 player.wins += 1
             }
         }
+        
         
         for player in playersInGame {
             player.totalPoints += player.points
