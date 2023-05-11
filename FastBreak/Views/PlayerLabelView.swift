@@ -19,35 +19,35 @@ struct PlayerLabelView: View {
             VStack{
                 
                 Text("Pts")
-                Text("\(player.points.clean)")
+                Text(player.points.clean)
                     
             }
             .onTapGesture(perform: {gvm.scoreboardMove(sender: "point", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Ast")
-                Text("\(player.assists.clean)")
+                Text(player.assists.clean)
                     
             }
             .onTapGesture(perform: {gvm.scoreboardMove(sender: "assist", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Reb")
-                Text("\(player.rebounds.clean)")
+                Text(player.rebounds.clean)
                     
             }
             .onTapGesture(perform: {gvm.scoreboardMove(sender: "rebound", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Stl")
-                Text("\(player.steals.clean)")
+                Text(player.steals.clean)
                     
             }
             .onTapGesture(perform: {gvm.scoreboardMove(sender: "steal", player: player)})
             .frame(width: 50, height: 50)
             VStack{
                 Text("Blk")
-                Text("\(player.blocks.clean)")
+                Text(player.blocks.clean)
             }
             .onTapGesture(perform: {gvm.scoreboardMove(sender: "block", player: player)})
             .frame(width: 50, height: 50)

@@ -101,16 +101,39 @@ class GameViewModel: ObservableObject{
         
         case "assist":
             player.assists += 1
+            if homeTeam.containsPlayer(checkPlayer: player){
+                homeTeam.teamAssists += 1
+            }
+            else{
+                awayTeam.teamAssists += 1
+            }
             
             
         case "rebound":
             player.rebounds += 1
-            
+            if homeTeam.containsPlayer(checkPlayer: player){
+                homeTeam.teamRebounds += 1
+            }
+            else{
+                awayTeam.teamRebounds += 1
+            }
         case "steal":
             player.steals += 1
+            if homeTeam.containsPlayer(checkPlayer: player){
+                homeTeam.teamSteals += 1
+            }
+            else{
+                awayTeam.teamSteals += 1
+            }
             
         case "block":
             player.blocks += 1
+            if homeTeam.containsPlayer(checkPlayer: player){
+                homeTeam.teamBlocks += 1
+            }
+            else{
+                awayTeam.teamBlocks += 1
+            }
             
         default:
             print("Invalid move")

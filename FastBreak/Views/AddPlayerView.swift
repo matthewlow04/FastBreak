@@ -41,7 +41,7 @@ struct AddPlayerView: View {
                     HStack{
                         Text("Notes: ")
                         TextField("Add custom notes", text: $viewModel.notes)
-                            .foregroundColor(CustomColor.dun).opacity(1)
+                            .foregroundColor(CustomColor.chestNut).opacity(1)
                     }
                 }header: {
                     Text("NOTES")

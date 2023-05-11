@@ -13,9 +13,9 @@ struct PlayerStatsView: View {
     
     var currentPlayer: Player
     var picture = "avatar"
-    var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks", "TeamPoints"]
-    lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks]
-    
+    var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks", "Team Points", "Team Assists"]
+    lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks, currentPlayer.teamPoints, currentPlayer.teamAssists]
+    @StateObject var svm:StatsViewModel
    
     
     var body: some View {
@@ -33,16 +33,17 @@ struct PlayerStatsView: View {
             
             }
            
+        }.onAppear{
+            svm.getTitles(player: currentPlayer)
         }
         VStack(alignment: .leading){
             Text((currentPlayer.name ?? "UnnamedPlayer"))
                  .font(.title)
             HStack() {
                 Text(currentPlayer.position!)
-                
                 Spacer()
                 VStack{
-                    Text(getTitle(player: currentPlayer))
+                    Text(svm.getExperienceTitle(player: currentPlayer))
                     Text("\(currentPlayer.games.clean) Games Played")
                 } .font(.subheadline)
                
@@ -55,7 +56,7 @@ struct PlayerStatsView: View {
             Section{
                 StatsListView(gamesPlayed: currentPlayer.games ,stats: playerAttributesValue(), statNames: playerAttributeNames)
             }header: {
-                Text("Averages").bold()
+                Text("Averages")
             }
             
             Section{
@@ -70,6 +71,21 @@ struct PlayerStatsView: View {
 
             }
                 
+          
+            
+            Section{
+                ForEach(Array(zip(svm.titles, svm.titleMessages)), id: \.0) { item in
+                    VStack(alignment: .leading) {
+                        Text(item.0)
+                            .font(.system(size: 18))
+                            .bold()
+                        Text(item.1)
+                    }
+                }
+            }header: {
+                Text("ACHIEVEMENTS")
+            }
+            
             Section{
                 Text((currentPlayer.notes!))
             }header: {
@@ -87,23 +103,7 @@ struct PlayerStatsView: View {
         return mutableSelf.playerAttributes
     }
     
-    func getTitle(player: Player) -> String{
-        if player.games >= 25{
-            return "Veteran"
-        }
-        else if player.games >= 15{
-            return "Pro"
-        }
-        else if player.games >= 10{
-            return "Casual"
-        }
-        else if player.games >= 5{
-            return "Amateur"
-        }
-        else{
-            return "Newbie"
-        }
-    }
+   
 }
 
 
