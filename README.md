@@ -10,7 +10,14 @@ https://github.com/matthewlow04/FastBreak/assets/105395794/9891fceb-3153-4825-b2
 
 # View Stats and Delete Players
 
+https://github.com/matthewlow04/FastBreak/assets/105395794/d299dda5-1c02-4df9-91e6-d96363532dd6
+
 # Play Game
 
+https://github.com/matthewlow04/FastBreak/assets/105395794/f7ae7000-6b89-4dac-9c41-7a3422759504
+
+
 # Save Local Data
+
+https://github.com/matthewlow04/FastBreak/assets/105395794/32c858de-ff3d-4beb-96c4-f0248ee5102c
 
