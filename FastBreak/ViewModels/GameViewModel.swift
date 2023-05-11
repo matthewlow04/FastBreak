@@ -198,6 +198,7 @@ class GameViewModel: ObservableObject{
             player.teamRebounds += Float(homeTeam.teamRebounds)
             player.teamSteals += Float(homeTeam.teamSteals)
             player.teamBlocks += Float(homeTeam.teamBlocks)
+            player.pointsAgainst += Float(awayTeam.teamPoints)
         }
         
         for player in awayTeam.players{
@@ -206,6 +207,7 @@ class GameViewModel: ObservableObject{
             player.teamRebounds += Float(awayTeam.teamRebounds)
             player.teamSteals += Float(awayTeam.teamSteals)
             player.teamBlocks += Float(awayTeam.teamBlocks)
+            player.pointsAgainst += Float(homeTeam.teamPoints)
         }
         
         showingFinishGameAlert = true

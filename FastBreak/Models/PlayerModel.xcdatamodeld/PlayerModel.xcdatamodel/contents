@@ -10,6 +10,7 @@
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="picture" optional="YES" attributeType="String"/>
         <attribute name="points" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pointsAgainst" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="position" optional="YES" attributeType="String"/>
         <attribute name="rebounds" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="steals" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
@@ -29,6 +30,6 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Player" positionX="-63" positionY="-18" width="128" height="374"/>
+        <element name="Player" positionX="-63" positionY="-18" width="128" height="389"/>
     </elements>
 </model>

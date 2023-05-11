@@ -36,13 +36,13 @@ class StatsViewModel: ObservableObject{
         if (player.totalSteals>(player.teamSteals/2)){
             var message: String
             titles.append("Thief")
-            message = (player.name!+" is responsible for \(getPercent(player.totalSteals, player.teamSteals))% of their team's assists")
+            message = (player.name!+" is responsible for \(getPercent(player.totalSteals, player.teamSteals))% of their team's steals")
             titleMessages.append(message)
         }
         if (player.totalBlocks>(player.totalBlocks/2)){
             var message: String
             titles.append("Clamps")
-            message = (player.name!+" is responsible for \(getPercent(player.totalBlocks, player.teamBlocks))% of their team's assists")
+            message = (player.name!+" is responsible for \(getPercent(player.totalBlocks, player.teamBlocks))% of their team's blocks")
             titleMessages.append(message)
         }
         if (player.wins/player.games >= 0.6){

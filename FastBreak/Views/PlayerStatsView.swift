@@ -13,8 +13,8 @@ struct PlayerStatsView: View {
     
     var currentPlayer: Player
     var picture = "avatar"
-    var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks", "Team Points", "Team Assists"]
-    lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks, currentPlayer.teamPoints, currentPlayer.teamAssists]
+    var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks"]
+    lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks]
     @StateObject var svm:StatsViewModel
    
     
