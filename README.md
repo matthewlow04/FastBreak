@@ -4,7 +4,5 @@ It keeps score of games while saving game data and tracks individual stats for p
 
 The MVVM architechture of this app allows easy editing of previous code which will hopefully help when other people collaborate on this project with me!
 
-##Add Player
-https://github.com/matthewlow04/FastBreak/assets/105395794/42a28528-3d4c-4f4c-b965-87e73fe216e3
 
 
