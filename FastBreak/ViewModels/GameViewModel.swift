@@ -118,12 +118,24 @@ class GameViewModel: ObservableObject{
         case "assist":
             if(increase){
                 player.assists += 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamAssists += 1
+                }
+                else{
+                    awayTeam.teamAssists += 1
+                }
             }
             else{
                 if(player.assists <= 0){
                     return
                 }
                 player.assists -= 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamAssists -= 1
+                }
+                else{
+                    awayTeam.teamAssists -= 1
+                }
             }
             
            
@@ -132,33 +144,69 @@ class GameViewModel: ObservableObject{
         case "rebound":
             if(increase){
                 player.rebounds += 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamRebounds += 1
+                }
+                else{
+                    awayTeam.teamRebounds += 1
+                }
             }
             else{
                 if(player.rebounds <= 0){
                     return
                 }
                 player.rebounds -= 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamRebounds -= 1
+                }
+                else{
+                    awayTeam.teamRebounds -= 1
+                }
             }
             
         case "steal":
             if(increase){
                 player.steals += 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamSteals += 1
+                }
+                else{
+                    awayTeam.teamSteals += 1
+                }
             }
             else{
                 if(player.steals <= 0){
                     return
                 }
                 player.steals -= 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamSteals -= 1
+                }
+                else{
+                    awayTeam.teamSteals -= 1
+                }
             }
         case "block":
             if(increase){
                 player.blocks += 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamBlocks += 1
+                }
+                else{
+                    awayTeam.teamBlocks += 1
+                }
             }
             else{
                 if(player.blocks <= 0){
                     return
                 }
                 player.blocks -= 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamBlocks -= 1
+                }
+                else{
+                    awayTeam.teamBlocks -= 1
+                }
             }
             
         default:

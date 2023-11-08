@@ -19,7 +19,7 @@ struct StatsView: View {
             VStack{
                 List{
                     ForEach(playerStats){ player in
-                        NavigationLink(destination: PlayerStatsView(currentPlayer: player)){
+                        NavigationLink(destination: PlayerStatsView(currentPlayer: player, svm: StatsViewModel())){
                             HStack{
                                 VStack(alignment: .leading, spacing: 6){
                                     Text((player.name ?? "UnnamedPlayer"))

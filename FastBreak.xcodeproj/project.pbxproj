@@ -30,6 +30,7 @@
 		34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5A88229F06E3300FFEF75 /* StatsView.swift */; };
 		34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085229F6DE4000CC24DB /* GameViewModel.swift */; };
 		34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */; };
+		A0E7B4232AFC0C9D002FBFD7 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B4222AFC0C9D002FBFD7 /* StatsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		34D5A88229F06E3300FFEF75 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		34E7085229F6DE4000CC24DB /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewModel.swift; sourceTree = "<group>"; };
+		A0E7B4222AFC0C9D002FBFD7 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				34E7085229F6DE4000CC24DB /* GameViewModel.swift */,
 				34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */,
+				A0E7B4222AFC0C9D002FBFD7 /* StatsViewModel.swift */,
 				34D5A87429F065CF00FFEF75 /* DataController.swift */,
 			);
 			path = ViewModels;
@@ -242,6 +245,7 @@
 				34AC07262A0B15DA000B08DF /* StartGameBackgroundStripesView.swift in Sources */,
 				34E7085329F6DE4000CC24DB /* GameViewModel.swift in Sources */,
 				34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */,
+				A0E7B4232AFC0C9D002FBFD7 /* StatsViewModel.swift in Sources */,
 				343637B22A05CCC40039FE4E /* NumberFormatter.swift in Sources */,
 				34D06F1B2A0301E90019A842 /* ScoreboardView.swift in Sources */,
 				34D5A88329F06E3300FFEF75 /* StatsView.swift in Sources */,

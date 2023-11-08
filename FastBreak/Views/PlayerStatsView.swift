@@ -13,6 +13,7 @@ struct PlayerStatsView: View {
     
     var currentPlayer: Player
     var picture = "avatar"
+    @StateObject var svm:StatsViewModel
     var playerAttributeNames:[String] =  ["Points", "Assists", "Rebounds", "Steals", "Blocks", "TeamPoints"]
     lazy var playerAttributes = [currentPlayer.totalPoints, currentPlayer.totalAssists, currentPlayer.totalRebounds, currentPlayer.totalSteals, currentPlayer.totalBlocks]
     
@@ -42,7 +43,7 @@ struct PlayerStatsView: View {
                 
                 Spacer()
                 VStack{
-                    Text(getTitle(player: currentPlayer))
+                    Text(svm.getExperienceTitle(player: currentPlayer))
                     Text("\(currentPlayer.games.clean) Games Played")
                 } .font(.subheadline)
                
@@ -69,13 +70,30 @@ struct PlayerStatsView: View {
                 }
 
             }
+            
+            Section{
+                ForEach(Array(zip(svm.titles, svm.titleMessages)), id: \.0) { item in
+                    VStack(alignment: .leading) {
+                        Text(item.0)
+                            .font(.system(size: 18))
+                            .bold()
+                        Text(item.1)
+                    }
+                }
+            }header: {
+                Text("ACHIEVEMENTS")
+            }
                 
             Section{
                 Text((currentPlayer.notes!))
             }header: {
                 Text("NOTES")
             }
-        } .foregroundColor(CustomColor.goldenBrown)
+        } 
+        .foregroundColor(CustomColor.goldenBrown)
+        .onAppear{
+            svm.getTitles(player: currentPlayer)
+        }
        
        
         
@@ -87,23 +105,6 @@ struct PlayerStatsView: View {
         return mutableSelf.playerAttributes
     }
     
-    func getTitle(player: Player) -> String{
-        if player.games >= 25{
-            return "Veteran"
-        }
-        else if player.games >= 15{
-            return "Pro"
-        }
-        else if player.games >= 10{
-            return "Casual"
-        }
-        else if player.games >= 5{
-            return "Amateur"
-        }
-        else{
-            return "Newbie"
-        }
-    }
 }
 
 
@@ -112,7 +113,7 @@ struct CircleImage: View {
     var body: some View {
           Image(picture)
             .resizable()
-            .frame(width: 200, height: 200)
+            .frame(width: 150, height: 150)
                 .aspectRatio(contentMode: .fit)
                      .clipShape(Circle())
                      .overlay(Circle().stroke(Color.white, lineWidth: 2))
