@@ -18,7 +18,6 @@ struct StartGameView: View {
     var body: some View {
         
         ZStack{
-            StartGameBackgroundView()
             StartGameBackgroundStripesView()
             VStack {
                 Spacer()
@@ -26,6 +25,7 @@ struct StartGameView: View {
                     VStack{
                         Text("Home Team")
                             .foregroundColor(CustomColor.goldenBrown)
+                            .font(Font.system(size: 20, weight: .semibold, design: .rounded))
                         Picker("Pick", selection: $gamevm.playerOne){
                             ForEach(playerStats,id: \.self){
                                 Text($0.name!).tag($0 as Player?)
@@ -48,6 +48,7 @@ struct StartGameView: View {
                     VStack{
                         Text("Away Team")
                             .foregroundColor(CustomColor.goldenBrown)
+                            .font(Font.system(size: 20, weight: .semibold, design: .rounded))
                         Picker("Pick", selection: $gamevm.playerFour){
                             ForEach(playerStats,id: \.self){
                                 Text($0.name!).tag($0 as Player?)
@@ -108,9 +109,8 @@ struct StartGameView: View {
     
     let avm = AddPlayerViewModel()
     var addPlayerButton: some View{
-       
+    
         NavigationLink(destination: AddPlayerView(viewModel: avm)){
-            
             Text("New Player")
         }
     }

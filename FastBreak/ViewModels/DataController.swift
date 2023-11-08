@@ -37,14 +37,13 @@ class DataController: ObservableObject{
         player.name = name
         player.position = position
         player.notes = notes
-        player.id = UUID() //new food so new id
+        player.id = UUID()
         save(context: context)
     }
     
     func editPlayer(player: Player, name: String, context: NSManagedObjectContext){
         player.name = name
         save(context: context)
-        
     }
     
 }

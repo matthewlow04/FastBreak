@@ -88,33 +88,81 @@ class GameViewModel: ObservableObject{
         }
     }
     
-    func scoreboardMove(sender: String, player: Player){
+    func scoreboardMove(sender: String, player: Player, increase: Bool){
         switch sender{
         case "point":
-            player.points += 1
-            if homeTeam.containsPlayer(checkPlayer: player){
-                homeTeam.teamPoints += 1
+            if(increase){
+                player.points += 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamPoints += 1
+                }
+                else{
+                    awayTeam.teamPoints += 1
+                }
             }
             else{
-                awayTeam.teamPoints += 1
+                if(player.points <= 0){
+                    return
+                }
+                player.points -= 1
+                if homeTeam.containsPlayer(checkPlayer: player){
+                    homeTeam.teamPoints -= 1
+                }
+                else{
+                    awayTeam.teamPoints -= 1
+                }
             }
+            
+          
         
         case "assist":
-            player.assists += 1
+            if(increase){
+                player.assists += 1
+            }
+            else{
+                if(player.assists <= 0){
+                    return
+                }
+                player.assists -= 1
+            }
+            
+           
             
             
         case "rebound":
-            player.rebounds += 1
+            if(increase){
+                player.rebounds += 1
+            }
+            else{
+                if(player.rebounds <= 0){
+                    return
+                }
+                player.rebounds -= 1
+            }
             
         case "steal":
-            player.steals += 1
-            
+            if(increase){
+                player.steals += 1
+            }
+            else{
+                if(player.steals <= 0){
+                    return
+                }
+                player.steals -= 1
+            }
         case "block":
-            player.blocks += 1
+            if(increase){
+                player.blocks += 1
+            }
+            else{
+                if(player.blocks <= 0){
+                    return
+                }
+                player.blocks -= 1
+            }
             
         default:
             print("Invalid move")
-
         }
 
     }

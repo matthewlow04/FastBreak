@@ -17,6 +17,7 @@ struct ScoreboardView: View {
             ScrollView{
                 Text("Home")
                     .foregroundColor(CustomColor.goldenBrown)
+                    .font(Font.system(size: 20, weight: .semibold, design: .rounded))
                 PlayerLabelView(player: gvm.playerOne!, gvm: gvm)
                     .foregroundColor(CustomColor.chestNut)
                 PlayerLabelView(player: gvm.playerTwo!, gvm: gvm)
@@ -26,6 +27,7 @@ struct ScoreboardView: View {
                 Spacer()
                 Text("Away")
                     .foregroundColor(CustomColor.goldenBrown)
+                    .font(Font.system(size: 20, weight: .semibold, design: .rounded))
                 PlayerLabelView(player: gvm.playerFour!, gvm: gvm)
                     .foregroundColor(CustomColor.chestNut)
                 PlayerLabelView(player: gvm.playerFive!, gvm: gvm)

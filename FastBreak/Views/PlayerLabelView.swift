@@ -13,46 +13,84 @@ struct PlayerLabelView: View {
     
     var body: some View {
         HStack{
+            
             Text(player.name ?? "Unnamed player")
                 .lineLimit(2)
-                .frame(width: 100, height: 50, alignment: .center)
+                .frame(width: 100, height: 50, alignment: .leading)
+                .padding(.leading, 10)
             VStack{
-                
+                IncreaseButton(sender: "point", player: player, gvm: gvm)
                 Text("Pts")
                 Text("\(player.points.clean)")
+                DecreaseButton(sender: "point", player: player, gvm: gvm)
                     
             }
-            .onTapGesture(perform: {gvm.scoreboardMove(sender: "point", player: player)})
             .frame(width: 50, height: 50)
             VStack{
+                IncreaseButton(sender: "assist", player: player, gvm: gvm)
                 Text("Ast")
                 Text("\(player.assists.clean)")
-                    
+                DecreaseButton(sender: "assist", player: player, gvm: gvm)
             }
-            .onTapGesture(perform: {gvm.scoreboardMove(sender: "assist", player: player)})
+           
             .frame(width: 50, height: 50)
             VStack{
+                IncreaseButton(sender: "rebound", player: player, gvm: gvm)
                 Text("Reb")
                 Text("\(player.rebounds.clean)")
-                    
+                DecreaseButton(sender: "rebound", player: player, gvm: gvm)
             }
-            .onTapGesture(perform: {gvm.scoreboardMove(sender: "rebound", player: player)})
             .frame(width: 50, height: 50)
             VStack{
+                IncreaseButton(sender: "steal", player: player, gvm: gvm)
                 Text("Stl")
                 Text("\(player.steals.clean)")
+                DecreaseButton(sender: "steal", player: player, gvm: gvm)
                     
             }
-            .onTapGesture(perform: {gvm.scoreboardMove(sender: "steal", player: player)})
             .frame(width: 50, height: 50)
             VStack{
+                IncreaseButton(sender: "block", player: player, gvm: gvm)
                 Text("Blk")
                 Text("\(player.blocks.clean)")
+                DecreaseButton(sender: "block", player: player, gvm: gvm)
             }
-            .onTapGesture(perform: {gvm.scoreboardMove(sender: "block", player: player)})
             .frame(width: 50, height: 50)
         }
+        .padding(.vertical, 12)
     }
+    
+    struct IncreaseButton: View {
+        var sender: String
+        var player: Player
+        var gvm: GameViewModel
+
+        var body: some View {
+            Button(action: {
+                gvm.scoreboardMove(sender: sender, player: player, increase: true)
+                print("Increase")
+            }) {
+                Image(systemName: "chevron.up")
+            }
+        }
+    }
+    
+    struct DecreaseButton: View {
+        var sender: String
+        var player: Player
+        var gvm: GameViewModel
+
+        var body: some View {
+            Button(action: {
+                gvm.scoreboardMove(sender: sender, player: player, increase: false)
+                print("Decrease")
+            }) {
+                Image(systemName: "chevron.down")
+            }
+        }
+            
+    }
+
     
 }
 

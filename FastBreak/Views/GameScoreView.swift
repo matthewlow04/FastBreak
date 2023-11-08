@@ -21,7 +21,7 @@ struct GameScoreView: View {
                 Text("\(gvm.awayTeam.teamPoints)")
             }
         }
-        .font(.largeTitle)
+        .font(Font.system(size: 40, weight: .semibold, design: .rounded))
     }
 }
 
