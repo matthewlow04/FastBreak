@@ -72,14 +72,21 @@ struct PlayerStatsView: View {
             }
             
             Section{
-                ForEach(Array(zip(svm.titles, svm.titleMessages)), id: \.0) { item in
-                    VStack(alignment: .leading) {
-                        Text(item.0)
-                            .font(.system(size: 18))
-                            .bold()
-                        Text(item.1)
+                if(!svm.titles.isEmpty){
+                    ForEach(Array(zip(svm.titles, svm.titleMessages)), id: \.0) { item in
+                        VStack(alignment: .leading) {
+                            Text(item.0)
+                                .font(.system(size: 18))
+                                .bold()
+                            Text(item.1)
+                        }
                     }
+                }else{
+                    Text("No Achievements")
+                        .italic()
+                        .font(.subheadline)
                 }
+               
             }header: {
                 Text("ACHIEVEMENTS")
             }
