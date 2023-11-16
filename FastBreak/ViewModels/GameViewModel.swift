@@ -281,6 +281,8 @@ class GameViewModel: ObservableObject{
             player.teamBlocks += Float(awayTeam.teamBlocks)
         }
         
+        DataController.shared.addGameHistory(aScore: awayTeam.teamPoints, hScore: homeTeam.teamPoints, aTeam: awayTeam.players, hTeam: homeTeam.players, context: context)
+        
         showingFinishGameAlert = true
         
         clearStats()

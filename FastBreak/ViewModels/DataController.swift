@@ -46,4 +46,27 @@ class DataController: ObservableObject{
         save(context: context)
     }
     
+    func addGameHistory(aScore: Int, hScore: Int, aTeam: [Player], hTeam: [Player], context: NSManagedObjectContext){
+        let gameHistory = GameHistory(context: context)
+        gameHistory.date = Date.now
+        gameHistory.id = UUID()
+        gameHistory.awayScore = Int16(aScore)
+        gameHistory.homeScore = Int16(hScore)
+        
+        gameHistory.playerOne = hTeam[0].name
+        gameHistory.playerTwo = hTeam[1].name
+        gameHistory.playerThree = hTeam[2].name
+        
+        gameHistory.playerFour = aTeam[0].name
+        gameHistory.playerFive = aTeam[1].name
+        gameHistory.playerSix = aTeam[2].name
+        
+        
+//        let setOfAwayPlayers = NSSet(array: aTeam)
+//        gameHistory.awayPlayers = setOfAwayPlayers
+//        
+//        let setOfHomePlayers = NSSet(array: hTeam)
+//        gameHistory.homePlayers = setOfHomePlayers
+    }
+    
 }

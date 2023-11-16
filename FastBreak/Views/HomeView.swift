@@ -22,9 +22,11 @@ struct HomeView: View {
                         .buttonStyle(HomeButtonStyle())
                     addButton
                         .buttonStyle(HomeButtonStyle())
+                    gameLogButton
+                        .buttonStyle(HomeButtonStyle())
                     statsButton
                         .buttonStyle(HomeButtonStyle())
-         
+                    
                 }
                 .foregroundColor(CustomColor.smokyBlack)
             }
@@ -59,6 +61,16 @@ struct HomeView: View {
         NavigationLink(destination: StatsView()){
             HStack{
                 Text("STATS")
+                Image(systemName: "play")
+            }
+            .foregroundColor(CustomColor.goldenBrown)
+        }
+    }
+    
+    var gameLogButton: some View{
+        NavigationLink(destination: GameHistoryView()){
+            HStack{
+                Text("GAME LOGS")
                 Image(systemName: "play")
             }
             .foregroundColor(CustomColor.goldenBrown)
