@@ -46,6 +46,17 @@ class DataController: ObservableObject{
         save(context: context)
     }
     
+    func findPlayer(name: String, players: [Player]) -> Player?{
+        var playerList = players
+        if(playerList.filter{$0.name == name}.isEmpty){
+            return nil
+        }else{
+            return playerList.filter{$0.name == name}[0]
+        }
+     
+    }
+    
+ 
     func addGameHistory(aScore: Int, hScore: Int, aTeam: [Player], hTeam: [Player], context: NSManagedObjectContext){
         let gameHistory = GameHistory(context: context)
         gameHistory.date = Date.now
@@ -60,6 +71,8 @@ class DataController: ObservableObject{
         gameHistory.playerFour = aTeam[0].name
         gameHistory.playerFive = aTeam[1].name
         gameHistory.playerSix = aTeam[2].name
+        
+       
         
         
 //        let setOfAwayPlayers = NSSet(array: aTeam)
