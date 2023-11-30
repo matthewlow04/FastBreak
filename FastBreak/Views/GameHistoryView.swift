@@ -71,6 +71,7 @@ struct GameHistoryView: View {
                                 .stroke(CustomColor.dun, lineWidth: 1)
                         )
                         .padding(.bottom, 10)
+                    
                     }
                 }
                 

@@ -47,7 +47,7 @@ class DataController: ObservableObject{
     }
     
     func findPlayer(name: String, players: [Player]) -> Player?{
-        var playerList = players
+        let playerList = players
         if(playerList.filter{$0.name == name}.isEmpty){
             return nil
         }else{

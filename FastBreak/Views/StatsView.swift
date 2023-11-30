@@ -57,15 +57,15 @@ struct StatsView: View {
                                 Spacer()
                                 switch selectedSortOption {
                                     case "Points":
-                                    Text("\((player.totalPoints/player.games).clean) PPG")
+                                        Text("\((player.totalPoints/player.games).cleanTwo) PPG")
                                     case "Rebounds":
-                                        Text("\((player.totalRebounds/player.games).clean) RPG")
+                                        Text("\((player.totalRebounds/player.games).cleanTwo) RPG")
                                     case "Assists":
-                                        Text("\((player.totalAssists/player.games).clean) APG")
+                                        Text("\((player.totalAssists/player.games).cleanTwo) APG")
                                     case "Steals":
-                                        Text("\((player.totalSteals/player.games).clean) SPG")
+                                        Text("\((player.totalSteals/player.games).cleanTwo) SPG")
                                     case "Blocks":
-                                        Text("\((player.totalBlocks/player.games).clean) BPG")
+                                        Text("\((player.totalBlocks/player.games).cleanTwo) BPG")
                                     default:
                                         EmptyView()
                                 }

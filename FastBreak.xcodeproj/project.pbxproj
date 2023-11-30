@@ -32,8 +32,20 @@
 		34E7085529F6E1B500CC24DB /* AddPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */; };
 		A035B9692B06D460000D54F2 /* GameHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035B9682B06D460000D54F2 /* GameHistoryView.swift */; };
 		A035B96B2B06D944000D54F2 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035B96A2B06D944000D54F2 /* DateFormatter.swift */; };
+		A0577ED82B0971EF005A4AA2 /* FastBreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0577ED72B0971EF005A4AA2 /* FastBreakTests.swift */; };
+		A0577EDF2B097230005A4AA2 /* ScoreboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0577EDE2B097230005A4AA2 /* ScoreboardTests.swift */; };
 		A0E7B4232AFC0C9D002FBFD7 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B4222AFC0C9D002FBFD7 /* StatsViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A0577ED92B0971EF005A4AA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34D5A85429F0647A00FFEF75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34D5A85B29F0647A00FFEF75;
+			remoteInfo = FastBreak;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		343637B12A05CCC40039FE4E /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
@@ -62,11 +74,21 @@
 		34E7085429F6E1B500CC24DB /* AddPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewModel.swift; sourceTree = "<group>"; };
 		A035B9682B06D460000D54F2 /* GameHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryView.swift; sourceTree = "<group>"; };
 		A035B96A2B06D944000D54F2 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		A0577ED52B0971EF005A4AA2 /* FastBreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastBreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0577ED72B0971EF005A4AA2 /* FastBreakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastBreakTests.swift; sourceTree = "<group>"; };
+		A0577EDE2B097230005A4AA2 /* ScoreboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTests.swift; sourceTree = "<group>"; };
 		A0E7B4222AFC0C9D002FBFD7 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		34D5A85929F0647A00FFEF75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0577ED22B0971EF005A4AA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				34D5A85E29F0647A00FFEF75 /* FastBreak */,
+				A0577ED62B0971EF005A4AA2 /* FastBreakTests */,
 				34D5A85D29F0647A00FFEF75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				34D5A85C29F0647A00FFEF75 /* FastBreak.app */,
+				A0577ED52B0971EF005A4AA2 /* FastBreakTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +189,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A0577ED62B0971EF005A4AA2 /* FastBreakTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0577ED72B0971EF005A4AA2 /* FastBreakTests.swift */,
+				A0577EDE2B097230005A4AA2 /* ScoreboardTests.swift */,
+			);
+			path = FastBreakTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +218,24 @@
 			productReference = 34D5A85C29F0647A00FFEF75 /* FastBreak.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A0577ED42B0971EF005A4AA2 /* FastBreakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0577EDD2B0971EF005A4AA2 /* Build configuration list for PBXNativeTarget "FastBreakTests" */;
+			buildPhases = (
+				A0577ED12B0971EF005A4AA2 /* Sources */,
+				A0577ED22B0971EF005A4AA2 /* Frameworks */,
+				A0577ED32B0971EF005A4AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0577EDA2B0971EF005A4AA2 /* PBXTargetDependency */,
+			);
+			name = FastBreakTests;
+			productName = FastBreakTests;
+			productReference = A0577ED52B0971EF005A4AA2 /* FastBreakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,11 +243,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					34D5A85B29F0647A00FFEF75 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					A0577ED42B0971EF005A4AA2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 34D5A85B29F0647A00FFEF75;
 					};
 				};
 			};
@@ -214,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				34D5A85B29F0647A00FFEF75 /* FastBreak */,
+				A0577ED42B0971EF005A4AA2 /* FastBreakTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +281,13 @@
 			files = (
 				34D5A86729F0648000FFEF75 /* Preview Assets.xcassets in Resources */,
 				34D5A86429F0648000FFEF75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0577ED32B0971EF005A4AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +325,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0577ED12B0971EF005A4AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0577ED82B0971EF005A4AA2 /* FastBreakTests.swift in Sources */,
+				A0577EDF2B097230005A4AA2 /* ScoreboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0577EDA2B0971EF005A4AA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34D5A85B29F0647A00FFEF75 /* FastBreak */;
+			targetProxy = A0577ED92B0971EF005A4AA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		34D5A86829F0648000FFEF75 /* Debug */ = {
@@ -441,6 +521,53 @@
 			};
 			name = Release;
 		};
+		A0577EDB2B0971EF005A4AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V9PJ4F97F;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewLow.FastBreakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastBreak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FastBreak";
+			};
+			name = Debug;
+		};
+		A0577EDC2B0971EF005A4AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2V9PJ4F97F;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MatthewLow.FastBreakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastBreak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FastBreak";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -458,6 +585,15 @@
 			buildConfigurations = (
 				34D5A86B29F0648000FFEF75 /* Debug */,
 				34D5A86C29F0648000FFEF75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0577EDD2B0971EF005A4AA2 /* Build configuration list for PBXNativeTarget "FastBreakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0577EDB2B0971EF005A4AA2 /* Debug */,
+				A0577EDC2B0971EF005A4AA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
